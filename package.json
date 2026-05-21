@@ -1,0 +1,24 @@
+{
+  "name": "back-end-proyecto-1-semestre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jfontes07/Back-End-Proyecto-1-semestre.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jfontes07/Back-End-Proyecto-1-semestre/issues"
+  },
+  "homepage": "https://github.com/Jfontes07/Back-End-Proyecto-1-semestre#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
