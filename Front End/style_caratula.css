@@ -231,7 +231,7 @@ body{
 }
  
 .card__side {
-  height: 52rem;
+  height: 500px;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -244,7 +244,7 @@ body{
 }
  
 .card__side--front-1 {
-  background: linear-gradient(-45deg, #f403d1, #64b5f6);
+  background: linear-gradient(-45deg, #03b0f4, #eff1f3);
 }
  
 .card__side--back {
@@ -252,7 +252,7 @@ body{
 }
  
 .card__side--back-1 {
-  background: linear-gradient(-45deg, #64b5f6, #f403d1);
+  background: linear-gradient(-45deg, #64b5f6, #03b0f4);
 }
  
 .card:hover .card__side--front-1 {
@@ -277,8 +277,7 @@ body{
 }
  
 .imagen_art {
-  font-size: 4rem;
-  font-weight: 300;
+    height: 350px;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
