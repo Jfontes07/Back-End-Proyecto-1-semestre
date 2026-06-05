@@ -71,7 +71,7 @@ body {
   margin-bottom: 50px;
 }
 
-.img {
+#imagen1 {
   width: 120px;
   height: 120px;
   border: 2px solid #333;
@@ -126,7 +126,7 @@ body {
 }
 
 /* Creador */
-.creador {
+h5 {
   width: 120px;
   margin-left: auto;
   margin-top: 15px;
