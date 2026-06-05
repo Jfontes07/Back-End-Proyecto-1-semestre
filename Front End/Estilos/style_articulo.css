@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ececec;
+  padding: 20px;
+}
+
+/* Encabezado */
+.header {
+  width: 80%;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.articulo {
+  border: 2px solid #333;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+#subtitulo {
+  width: 75%;
+  margin: 0 auto 40px;
+  text-align: center;
+  border: 2px solid #333;
+  padding: 10px;
+}
+/* Contenedor principal */
+.revista {
+  width: 800px;
+  max-width: 95%;
+  margin: auto;
+  border: 2px solid #333;
+  background: white;
+  padding: 20px;
+  position: relative;
+}
+
+/* Fecha */
+#fecha {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid #333;
+  padding: 5px 10px;
+}
+
+/* Título */
+#titulo-principal {
+  width: 75%;
+  margin: 0 auto 40px;
+  text-align: center;
+  border: 2px solid #333;
+  padding: 10px;
+}
+
+/* Primera sección */
+.seccion-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.img {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-lateral {
+  width: 55%;
+}
+
+.linea {
+  height: 3px;
+  background: #333;
+  margin-bottom: 15px;
+}
+
+/* Texto central */
+.texto-central {
+  margin: 40px 0;
+}
+
+.texto-central .linea {
+  width: 85%;
+  margin: 20px auto;
+}
+
+/* Segunda sección */
+.seccion-inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.texto-izq {
+  width: 45%;
+}
+
+.texto-izq .linea {
+  width: 100%;
+}
+
+.img-derecha {
+  width: 160px;
+  height: 140px;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Creador */
+.creador {
+  width: 120px;
+  margin-left: auto;
+  margin-top: 15px;
+  border: 2px solid #333;
+  text-align: center;
+  padding: 8px;
+}
+
+/* Footer */
+.footer {
+  width: 70%;
+  margin: 20px auto 0;
+  border: 2px solid #333;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}

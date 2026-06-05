@@ -1,157 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portada Digital</title>
-    <link rel="stylesheet" href="style_caratula.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="estilos/style_caratula.css" />
+  </head>
+  <body>
     <main class="contenedor">
+      <header>
+        <div>26/05/2026</div>
 
-        <header> 
+        <div>Revistas Uruguayas</div>
 
-            <div>
-                26/05/2026
+        <div id="contador">😀 319</div>
+      </header>
+
+      <section class="buscador">
+        <input type="search" placeholder="Buscar artículo..." />
+      </section>
+
+      <section class="seccion-titulo">
+        <h2>Novedades</h2>
+      </section>
+
+      <section class="noticia-destacada">
+        <button class="flecha">❮</button>
+
+        <div class="contenido-destacado">
+          <div class="imagen-destacada">Imagen Principal</div>
+
+          <div class="texto-destacado">
+            <h1>Título de la noticia principal</h1>
+
+            <p>
+              Aquí aparecerá el resumen de la noticia más importante del día.
+              Este bloque ocupa gran parte de la pantalla para captar la
+              atención del visitante.
+            </p>
+          </div>
+        </div>
+
+        <button class="flecha">❯</button>
+      </section>
+
+      <section class="seccion-titulo">
+        <h2>Artículos</h2>
+      </section>
+
+      <section class="articulos-verticales">
+        <article class="articulo-vertical">
+          <div class="imagen">Imagen</div>
+
+          <h3>Título artículo</h3>
+
+          <p>Descripción breve del contenido del artículo.</p>
+        </article>
+
+        <article class="articulo-vertical">
+          <div class="imagen">Imagen</div>
+
+          <h3>Título artículo</h3>
+
+          <p>Descripción breve del contenido del artículo.</p>
+        </article>
+
+        <article class="articulo-vertical">
+          <div class="imagen">Imagen</div>
+
+          <h3>Título artículo</h3>
+
+          <p>Descripción breve del contenido del artículo.</p>
+        </article>
+      </section>
+
+      <section class="articulos-horizontales">
+        <article class="articulo-horizontal">
+          <div class="imagen-horizontal">Imagen</div>
+
+          <div>
+            <h3>Título horizontal</h3>
+            <p>Descripción del artículo horizontal.</p>
+          </div>
+        </article>
+
+        <div class="card">
+          <div class="card__side card__side--front-1">
+            <div class="imagen_art">
+              <img id="imagen1" src="Fotos/Carnaval.jpg" alt="..." />
             </div>
-
-            <div>
-                Revistas Uruguayas
+            <div class="card__info-content">
+              <p class="card__title">El carnaval</p>
+              <p class="card__desc">Murgas y tambores: Origen y evolución</p>
             </div>
-
-            <div id="contador">
-                😀 319
+          </div>
+          <div class="card__side card__side--back card__side--back-1">
+            <div class="card__cta">
+              <button class="btn btn--white">Ver artículo</button>
             </div>
+          </div>
+        </div>
+      </section>
 
-        </header>
-
-        <section class="buscador">
-            <input type="search" placeholder="Buscar artículo...">
-        </section>
-
-        <section class="seccion-titulo">
-            <h2>Novedades</h2>
-        </section>
-
-        <section class="noticia-destacada">
-
-            <button class="flecha">❮</button>
-
-            <div class="contenido-destacado">
-
-                <div class="imagen-destacada">
-                    Imagen Principal
-                </div>
-
-                <div class="texto-destacado">
-                    <h1>Título de la noticia principal</h1>
-
-                    <p>
-                        Aquí aparecerá el resumen de la noticia más importante
-                        del día. Este bloque ocupa gran parte de la pantalla
-                        para captar la atención del visitante.
-                    </p>
-                </div>
-
-            </div>
-
-            <button class="flecha">❯</button>
-
-        </section>
-
-        <section class="seccion-titulo">
-            <h2>Artículos</h2>
-        </section>
-
-        <section class="articulos-verticales">
-
-            <article class="articulo-vertical">
-
-                <div class="imagen">
-                    Imagen
-                </div>
-
-                <h3>Título artículo</h3>
-
-                <p>
-                    Descripción breve del contenido del artículo.
-                </p>
-
-            </article>
-
-            <article class="articulo-vertical">
-
-                <div class="imagen">
-                    Imagen
-                </div>
-
-                <h3>Título artículo</h3>
-
-                <p>
-                    Descripción breve del contenido del artículo.
-                </p>
-
-            </article>
-
-            <article class="articulo-vertical">
-
-                <div class="imagen">
-                    Imagen
-                </div>
-
-                <h3>Título artículo</h3>
-
-                <p>
-                    Descripción breve del contenido del artículo.
-                </p>
-
-            </article>
-
-        </section>
-
-        <section class="articulos-horizontales">
-
-            <article class="articulo-horizontal">
-
-                <div class="imagen-horizontal">
-                    Imagen
-                </div>
-
-                <div>
-                    <h3>Título horizontal</h3>
-                    <p>
-                        Descripción del artículo horizontal.
-                    </p>
-                </div>
-
-            </article>
-
-            
-      <div class="card">
-    <div class="card__side card__side--front-1">
-      <div class="imagen_art">
-        <img id="imagen1"src="Fotos/Carnaval.jpg" alt="..." />
-      </div>
-      <div class="card__info-content">
-        <p class="card__title">El carnaval</p>
-        <p class="card__desc">Murgas y tambores: Origen y evolución</p>
-      </div>
-    </div>
-    <div class="card__side card__side--back card__side--back-1">
-      <div class="card__cta">
-        <button class="btn btn--white">Ver artículo</button>
-      </div>
-    </div>
-  </div>
-</section>
-   
-
- <footer class="footer">
-     © 2026 Revista Digital
- </footer>
-
+      <footer class="footer">© 2026 Revista Digital</footer>
     </main>
-
-</body>
+  </body>
 </html>
