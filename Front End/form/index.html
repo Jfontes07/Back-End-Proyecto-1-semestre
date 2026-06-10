@@ -8,86 +8,103 @@
 </head>
 <body>
 
-    <header class="encabezado">
-        <form class="form-superior">
-            <input type="text" placeholder="Publicación de Artículo">
+    <header id="encabezado">
+        <form id="form-superior">
+             <h3>Publi</h3>
         </form>
     </header>
 
-    <main class="contenedor">
+    <main id="contenedor">
 
-        <div class="perfil">
+        <form id="formulario-articulo">
 
-          
+            <div id="campo-titulo">
+                <label for="titulo">Título del artículo</label>
+                <input
+                    type="text"
+                    class="campo"
+                    placeholder="Título"
+                    id="titulo"
+                >
+            </div>
 
-            
+            <div id="campo-subtitulo">
+                <label for="subTitulo">Subtítulo</label>
+                <input
+                    type="text"
+                    class="campo"
+                    placeholder="Subtítulo"
+                    id="subTitulo"
+                >
+            </div>
 
-        </div>
-
-        <form class="articulo">
-
-            <input
-                type="text"
-                class="campo"
-                placeholder="Título"
-            >
-
-            <input
-                type="text"
-                class="campo"
-                placeholder="Subtítulo"
-            >
-
-            <div class="fila">
-
-                <label>Fecha</label>
-
+            <div id="campo-fecha">
+                <label for="fecha">Fecha</label>
                 <input
                     type="date"
                     class="campo"
+                    id="fecha"
                 >
-
             </div>
 
-            <div class="fila">
-
-                <label>Creador</label>
-
+            <div id="campo-autor">
+                <label for="autor">Creador</label>
                 <input
                     type="text"
                     class="campo"
                     placeholder="Quién crea"
+                    id="autor"
                 >
-
             </div>
 
-            <textarea
-    class="contenido"
-    placeholder="Contenido del artículo"
-></textarea>
+            <div id="campo-contenido">
+                <label for="contenido">Tu artículo</label>
+                <textarea
+                    class="contenido"
+                    placeholder="Contenido del artículo"
+                    id="contenido"
+                ></textarea>
+            </div>
 
-<div class="imagenes">
-    <label for="imagenes">Imágenes del artículo</label>
+            <div id="campo-descripcion">
+                <label for="contenidoDescripcion">Descripción</label>
+                <textarea
+                    class="contenido"
+                    placeholder="Breve descripción"
+                    id="contenidoDescripcion"
+                ></textarea>
+            </div>
 
-    <input
-        type="file"
-        id="imagenes"
-        name="imagenes"
-        accept="image/*"
-        multiple
-    >
-</div>
+            <div id="campo-imagenes">
+                <label for="imagenes">Imágenes del artículo</label>
+                <input
+                    type="file"
+                    id="imagenes"
+                    name="imagenes"
+                    accept="image/*"
+                    multiple
+                >
+            </div>
 
-<input
-    type="url"
-    class="campo"
-    placeholder="Bibliografía o Fuente"
->
-            <button type="submit" class="btn">
-                Publicar Artículo
-            </button>
+            <div id="campo-bibliografa">
+                <label for="bibliografia">Bibliografía o fuente</label>
+                <input
+                    type="url"
+                    class="campo"
+                    placeholder="https://..."
+                    id="bibliografia"
+                >
+            </div>
+
+            <div id="campo-publicar">
+                <button type="submit" id="btn-publicar">
+                    Publicar artículo
+                </button>
+            </div>
 
         </form>
+
+        <p id="mensaje">¡Artículo publicado!</p>
 
     </main>
 
