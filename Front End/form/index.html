@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Artículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <form class="form-superior">
+            <input type="text" placeholder="Publicación de Artículo">
+        </form>
+    </header>
+
+    <main class="contenedor">
+
+        <div class="perfil">
+
+          
+
+            
+
+        </div>
+
+        <form class="articulo">
+
+            <input
+                type="text"
+                class="campo"
+                placeholder="Título"
+            >
+
+            <input
+                type="text"
+                class="campo"
+                placeholder="Subtítulo"
+            >
+
+            <div class="fila">
+
+                <label>Fecha</label>
+
+                <input
+                    type="date"
+                    class="campo"
+                >
+
+            </div>
+
+            <div class="fila">
+
+                <label>Creador</label>
+
+                <input
+                    type="text"
+                    class="campo"
+                    placeholder="Quién crea"
+                >
+
+            </div>
+
+            <textarea
+    class="contenido"
+    placeholder="Contenido del artículo"
+></textarea>
+
+<div class="imagenes">
+    <label for="imagenes">Imágenes del artículo</label>
+
+    <input
+        type="file"
+        id="imagenes"
+        name="imagenes"
+        accept="image/*"
+        multiple
+    >
+</div>
+
+<input
+    type="url"
+    class="campo"
+    placeholder="Bibliografía o Fuente"
+>
+            <button type="submit" class="btn">
+                Publicar Artículo
+            </button>
+
+        </form>
+
+    </main>
+
+</body>
+</html>
