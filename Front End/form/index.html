@@ -1,113 +1,116 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crear Artículo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header id="encabezado">
-        <form id="form-superior">
-              <h3>Publica articulo</h3>
-        </form>
+      <div id="form-superior">
+        <h3>Publicá tu artículo</h3>
+      </div>
     </header>
 
     <main id="contenedor">
+      <!-- UN SOLO FORM, sin action/method porque el envío lo maneja form.js con fetch -->
+      <form id="formulario-articulo">
+        <div id="campo-titulo">
+          <label for="tituloPrincipal">Título del artículo</label>
+          <input
+            type="text"
+            class="campo"
+            placeholder="Título"
+            id="tituloPrincipal"
+            name="tituloPrincipal"
+          />
+        </div>
 
-        <form id="formulario-articulo">
+        <div id="campo-subtitulo">
+          <label for="subtitulo">Subtítulo</label>
+          <input
+            type="text"
+            class="campo"
+            placeholder="Subtítulo"
+            id="subtitulo"
+            name="subtitulo"
+          />
+        </div>
 
-            <div id="campo-titulo">
-                <label for="titulo">Título del artículo</label>
-                <input
-                    type="text"
-                    class="campo"
-                    placeholder="Título"
-                    id="titulo"
-                >
-            </div>
+        <div id="campo-fecha">
+          <label for="fecha">Fecha</label>
+          <input type="date" class="campo" id="fecha" name="fecha" />
+        </div>
 
-            <div id="campo-subtitulo">
-                <label for="subTitulo">Subtítulo</label>
-                <input
-                    type="text"
-                    class="campo"
-                    placeholder="Subtítulo"
-                    id="subTitulo"
-                >
-            </div>
+        <div id="campo-autor">
+          <label for="autor">Creador</label>
+          <input
+            type="text"
+            class="campo"
+            placeholder="Quién crea"
+            id="autor"
+            name="autor"
+          />
+        </div>
 
-            <div id="campo-fecha">
-                <label for="fecha">Fecha</label>
-                <input
-                    type="date"
-                    class="campo"
-                    id="fecha"
-                >
-            </div>
+        <div id="campo-contenido">
+          <label for="contenido">Tu artículo</label>
+          <textarea
+            class="contenido"
+            placeholder="Contenido del artículo"
+            id="contenido"
+            name="contenido"
+          ></textarea>
+        </div>
 
-            <div id="campo-autor">
-                <label for="autor">Creador</label>
-                <input
-                    type="text"
-                    class="campo"
-                    placeholder="Quién crea"
-                    id="autor"
-                >
-            </div>
+        <div id="campo-descripcion">
+          <label for="descripcion">Descripción</label>
+          <textarea
+            class="contenido"
+            placeholder="Breve descripción"
+            id="descripcion"
+            name="descripcion"
+          ></textarea>
+        </div>
 
-            <div id="campo-contenido">
-                <label for="contenido">Tu artículo</label>
-                <textarea
-                    class="contenido"
-                    placeholder="Contenido del artículo"
-                    id="contenido"
-                ></textarea>
-            </div>
+        <div id="campo-imagenes">
+          <label for="imagenes">Imágenes del artículo</label>
+          <input
+            type="file"
+            id="imagenes"
+            name="imagenes"
+            accept="image/*"
+            multiple
+          />
+        </div>
 
-            <div id="campo-descripcion">
-                <label for="contenidoDescripcion">Descripción</label>
-                <textarea
-                    class="contenido"
-                    placeholder="Breve descripción"
-                    id="contenidoDescripcion"
-                ></textarea>
-            </div>
+        <div id="campo-bibliografa">
+          <label for="bibliografia">Bibliografía o fuente</label>
+          <input
+            type="url"
+            class="campo"
+            placeholder="https://..."
+            id="bibliografia"
+            name="bibliografia"
+          />
+        </div>
 
-            <div id="campo-imagenes">
-                <label for="imagenes">Imágenes del artículo</label>
-                <input
-                    type="file"
-                    id="imagenes"
-                    name="imagenes"
-                    accept="image/*"
-                    multiple
-                >
-            </div>
+        <div id="campo-publicar">
+          <input type="checkbox" id="tos" name="tos" required />
+          <label for="tos">Acepto los términos y condiciones</label>
+          <button type="submit" id="btn-publicar">Publicar artículo</button>
+        </div>
+      </form>
 
-            <div id="campo-bibliografa">
-                <label for="bibliografia">Bibliografía o fuente</label>
-                <input
-                    type="url"
-                    class="campo"
-                    placeholder="https://..."
-                    id="bibliografia"
-                >
-            </div>
-
-            <div id="campo-publicar">
-                <button type="submit" id="btn-publicar">
-                    Publicar artículo
-                </button>
-            </div>
-
-        </form>
-
-        <p id="mensaje">¡Artículo publicado!</p>
-
+      <p id="mensaje"></p>
     </main>
 
-</body>
+    <!-- form.js al final del body para que el DOM ya esté cargado -->
+    <script src="form.js"></script>
+  </body>
+  <div id="toast">
+    ¡Artículo publicado!
+    <button id="toast-cerrar">✕</button>
+  </div>
 </html>
