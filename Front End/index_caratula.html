@@ -25,25 +25,19 @@
       </section>
 
       <section class="noticia-destacada">
-        <button class="flecha">❮</button>
-
-        <div class="contenido-destacado">
-          <div class="imagen-destacada">Imagen Principal</div>
-
-          <div class="texto-destacado">
-            <h1>Título de la noticia principal</h1>
-
-            <p>
-              Aquí aparecerá el resumen de la noticia más importante del día.
-              Este bloque ocupa gran parte de la pantalla para captar la
-              atención del visitante.
-            </p>
-          </div>
-        </div>
-
-        <button class="flecha">❯</button>
-      </section>
-
+  <button class="flecha" id="flechaIzq">❮</button>
+  <div class="contenido-destacado">
+    <div class="imagen-destacada">
+      <img id="noticia-img" src="" alt="Imagen noticia" />
+      <div class="placeholder">Imagen Principal</div>
+    </div>
+    <div class="texto-destacado">
+      <h1 id="noticia-titulo">Cargando noticia...</h1>
+      <p id="noticia-desc">Por favor esperá un momento.</p>
+    </div>
+  </div>
+  <button class="flecha" id="flechaDer">❯</button>
+</section>
       <section class="seccion-titulo">
         <h2>Artículos</h2>
       </section>
@@ -104,5 +98,7 @@
 
       <footer class="footer">© 2026 Revista Digital</footer>
     </main>
+    <script src="noticias.js"></script>
+
   </body>
 </html>
