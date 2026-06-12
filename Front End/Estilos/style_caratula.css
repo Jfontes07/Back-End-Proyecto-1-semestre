@@ -370,3 +370,12 @@ body{
   font-size: 1.5rem;
   padding: 1rem;
 }
+/*Fuente*/
+@font-face {
+    font-family: "Barlow";
+    src: url("../fonts/Barlow-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: "Barlow", sans-serif;
+}
