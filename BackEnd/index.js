@@ -12,38 +12,47 @@ app.use(express.json());
 const articulos = [
   {
     id: 1,
-    titulo: "Titulo del primer artículo",
-
+    tituloPrincipal: "Carnaval",
+    subtitulo: "subtitulo del articulo",
+    fecha: "Fecha de creación",
     autor: "Nombre Apellido",
-    categoria: "Categoria",
+    contenido: "Categoria",
     descripcion: "Descripcion breve del artículo.",
   },
   {
     id: 2,
-    titulo: "Titulo del segundo artículo",
+    tituloPrincipal: "Carnaval",
+    subtitulo: "subtitulo del articulo",
+    fecha: "Fecha de creación",
     autor: "Nombre Apellido",
-    categoria: "Categoria",
+    contenido: "Categoria",
     descripcion: "Descripcion breve del artículo.",
   },
   {
     id: 3,
-    titulo: "Titulo del tercer artículo",
+    tituloPrincipal: "Carnaval",
+    subtitulo: "subtitulo del articulo",
+    fecha: "Fecha de creación",
     autor: "Nombre Apellido",
-    categoria: "Categoria",
+    contenido: "Categoria",
     descripcion: "Descripcion breve del artículo.",
   },
   {
     id: 4,
-    titulo: "Titulo del cuarto artículo",
+    tituloPrincipal: "Carnaval",
+    subtitulo: "subtitulo del articulo",
+    fecha: "Fecha de creación",
     autor: "Nombre Apellido",
-    categoria: "Categoria",
+    contenido: "Categoria",
     descripcion: "Descripcion breve del artículo.",
   },
   {
     id: 5,
-    titulo: "Titulo del cuarto artículo",
+    tituloPrincipal: "Carnaval",
+    subtitulo: "subtitulo del articulo",
+    fecha: "Fecha de creación",
     autor: "Nombre Apellido",
-    categoria: "Categoria",
+    contenido: "Categoria",
     descripcion: "Descripcion breve del artículo.",
   },
 ];
@@ -63,18 +72,21 @@ app.get("/articulos/:id", (req, res) => {
 });
 // POST /articulos → crea un artículo nuevo
 app.post("/articulos", (req, res) => {
-  const { titulo, autor, categoria, descripcion } = req.body;
+  const { tituloPrincipal, subtitulo, fecha, autor, contenido, descripcion } =
+    req.body;
 
-  if (!titulo || !autor || !descripcion) {
+  if (!tituloPrincipal || !autor || !descripcion) {
     return res.status(400).json({
       error: "Los campos título, autor y descripción son obligatorios",
     });
   }
   const nuevo = {
     id: articulos.length + 1,
-    titulo,
+    tituloPrincipal,
+    subtitulo,
+    fecha,
     autor,
-    categoria: categoria || "Sin categoría",
+    contenido: categoria || "Sin categoría",
     descripcion,
   };
   articulos.push(nuevo);
