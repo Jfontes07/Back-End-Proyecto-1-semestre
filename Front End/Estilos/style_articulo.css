@@ -24,16 +24,19 @@ body {
   width: 75%;
   margin: 0 auto 40px;
   text-align: center;
-  border: 5px solid #333;
+  border: 1px solid #999;
+  border-radius: 8px;
   padding: 10px;
 }
 #subtitulo {
   width: 75%;
   margin: 0 auto 40px;
   text-align: center;
-  border: 2px solid #333;
-  padding: 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0px 10px;
 }
+
 #imagen1 {
   width: 120px;
   height: 120px;
