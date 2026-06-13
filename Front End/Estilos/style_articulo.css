@@ -1,14 +1,60 @@
 /* Reset básico */
-* {
-  margin: 0;
+/** {
+  margin: 20;
   padding: 0;
   box-sizing: border-box;
-}
+}*/
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Barlow;
   background-color: #ececec;
   padding: 20px;
+}
+/* Fecha */
+#fecha {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid #333;
+  padding: 5px 10px;
+}
+
+/* Título */
+#tituloPrincipal {
+  width: 75%;
+  margin: 0 auto 40px;
+  text-align: center;
+  border: 5px solid #333;
+  padding: 10px;
+}
+#subtitulo {
+  width: 75%;
+  margin: 0 auto 40px;
+  text-align: center;
+  border: 2px solid #333;
+  padding: 10px;
+}
+#imagen1 {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contenido {
+  text-align: center;
+  width: 80px;
+  height: 150;
+}
+/* Creador */
+h5 {
+  width: 120px;
+  margin-left: auto;
+  margin-top: 15px;
+  border: 2px solid #333;
+  text-align: center;
+  padding: 8px;
 }
 
 /* Encabezado */
@@ -27,13 +73,6 @@ body {
   background: white;
 }
 
-#subtitulo {
-  width: 75%;
-  margin: 0 auto 40px;
-  text-align: center;
-  border: 2px solid #333;
-  padding: 10px;
-}
 /* Contenedor principal */
 .revista {
   width: 800px;
@@ -45,39 +84,12 @@ body {
   position: relative;
 }
 
-/* Fecha */
-#fecha {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border: 2px solid #333;
-  padding: 5px 10px;
-}
-
-/* Título */
-#titulo-principal {
-  width: 75%;
-  margin: 0 auto 40px;
-  text-align: center;
-  border: 2px solid #333;
-  padding: 10px;
-}
-
 /* Primera sección */
 .seccion-superior {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
-}
-
-#imagen1 {
-  width: 120px;
-  height: 120px;
-  border: 2px solid #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .texto-lateral {
@@ -123,16 +135,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Creador */
-h5 {
-  width: 120px;
-  margin-left: auto;
-  margin-top: 15px;
-  border: 2px solid #333;
-  text-align: center;
-  padding: 8px;
 }
 
 /* Footer */
