@@ -6,7 +6,13 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#ececec;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 40%, #415a77 100%);
+    overflow: hidden;
 }
 
 .contenedor{
@@ -107,6 +113,7 @@ body{
 }
 
 .texto-destacado h1{
+
     font-size:3rem;
     margin-bottom:20px;
 }
@@ -399,3 +406,65 @@ body{
 body {
     font-family: "Barlow", sans-serif;
 }
+/*fondo*/
+.decoracion-esfera {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(45deg, #00b4d8, #90e0ef);
+    border-radius: 50%;
+    top: 15%;
+    left: 20%;
+    z-index: 1;
+    filter: blur(20px);
+}
+.contenedor-caratula {
+    position: relative;
+    z-index: 2;
+    width: 480px;
+    padding: 40px;
+    text-align: center;
+    color: #ffffff;
+     background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+.categoria {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #90e0ef;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.linea-divisoria {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00b4d8, transparent);
+    margin: 25px auto;
+    width: 75%;
+}
+
+.autor {
+    font-size: 1.1rem;
+    color: #e0e1dd;
+    margin-bottom: 8px;
+}
+
+.fecha {
+    font-size: 0.9rem;
+    color: #8da9c4;
+}
+
+    
+
