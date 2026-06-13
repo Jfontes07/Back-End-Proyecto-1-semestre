@@ -268,3 +268,31 @@ p {
   cursor: pointer;
   font-weight: bold;
 }
+/* colores de la web*/
+:root {
+  --color-marca: 07123A;
+  --color-acento: 718EA4;
+  --color-titulos: 042037;
+  --color-texto: 123652;
+  --color-fondo-tarjeta: 496D89;
+}
+/* de los articulos */
+.tarjeta-articulo {
+  background-color: var(--color-fondo-tarjeta);
+  border-top: 4px solid var(--color-marca);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.tarjeta-articulo h2 {
+  color: var(--color-titulos);
+}
+
+.tarjeta-articulo p {
+  color: var(--color-texto);
+}
+
+.tarjeta-articulo a {
+  color: var(--color-acento);
+}
