@@ -1,12 +1,9 @@
-/* Reset básico */
-/** {
-  margin: 20;
-  padding: 0;
-  box-sizing: border-box;
-}*/
-
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Regular.ttf") format("truetype");
+}
 body {
-  font-family: Barlow;
+  font-family: "Barlow", sans-serif;
   padding: 20px;
   background-image: linear-gradient(
     180deg,
@@ -26,142 +23,65 @@ body {
   );
 }
 
-/* Fecha */
-#fecha {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border: 2px solid #333;
-  padding: 5px 10px;
-}
-
 /* Título */
 #tituloPrincipal {
-  width: 75%;
-  margin: 0 auto 40px;
   text-align: center;
-  border: 1px solid #999;
-  border-radius: 8px;
-  padding: 10px;
 }
+
+#tituloPrincipal h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
 #subtitulo {
-  width: 75%;
-  margin: 0 auto 40px;
   text-align: center;
-  border: 0.5px solid #ccc;
-  border-radius: 8px;
-  padding: 0px 10px;
+  margin-bottom: 30px;
 }
 
-#imagen1 {
-  width: 120px;
-  height: 120px;
+/* Primera imagen */
+#Imagen1 {
+  float: left;
+  width: 300px;
+  height: 200px;
   border: 2px solid #333;
+  border-radius: 15px;
+  margin: 0 20px 15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  color: black;
 }
+
+/* Texto */
 #contenido {
-  text-align: center;
-  width: 80px;
-  height: 150;
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
-/* Creador */
+
+/* Segunda imagen */
+#Imagen2 {
+  float: right;
+  width: 300px;
+  height: 200px;
+  border: 2px solid #333;
+  border-radius: 15px;
+  margin: 0 0 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
 h5 {
-  width: 120px;
-  margin-left: auto;
-  margin-top: 15px;
-  border: 2px solid #333;
+  clear: both;
   text-align: center;
-  padding: 8px;
+  margin-top: 30px;
 }
 
-/* Encabezado */
-.header {
-  width: 80%;
-  margin: 0 auto 20px;
-  position: relative;
-}
-
-.articulo {
-  border: 2px solid #333;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-}
-
-/* Contenedor principal */
-.revista {
-  width: 800px;
-  max-width: 95%;
-  margin: auto;
-  border: 2px solid #333;
-  background: white;
-  padding: 20px;
-  position: relative;
-}
-
-/* Primera sección */
-.seccion-superior {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
-.texto-lateral {
-  width: 55%;
-}
-
-.linea {
-  height: 3px;
-  background: #333;
-  margin-bottom: 15px;
-}
-
-/* Texto central */
-.texto-central {
-  margin: 40px 0;
-}
-
-.texto-central .linea {
-  width: 85%;
-  margin: 20px auto;
-}
-
-/* Segunda sección */
-.seccion-inferior {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
-}
-
-.texto-izq {
-  width: 45%;
-}
-
-.texto-izq .linea {
-  width: 100%;
-}
-
-.img-derecha {
-  width: 160px;
-  height: 140px;
-  border: 2px solid #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Footer */
 footer {
-  width: 70%;
-  margin: 20px auto 0;
-  border: 2px solid #333;
   text-align: center;
-  padding: 10px;
-  border-radius: 8px;
+  margin-top: 20px;
 }
