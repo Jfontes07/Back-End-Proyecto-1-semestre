@@ -25,6 +25,8 @@ body {
 }
 #contenido {
   height: 400px;
+  text-align: justify;
+  line-height: 1.6;
 }
 #fecha {
   margin-bottom: 20px;
@@ -77,13 +79,22 @@ body {
   margin: 20px 0 20px 20px;
 }
 
-#contenido {
-  text-align: justify;
-  line-height: 1.6;
-}
-
 h5,
 footer {
   clear: both;
-  text-align: center;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+h5 {
+  clear: both;
+  margin-top: 650px; /* baja todo el bloque */
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 0;
 }
