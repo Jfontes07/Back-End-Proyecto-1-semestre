@@ -102,21 +102,40 @@ body{
 }
 
 .imagen-destacada {
-  width: 50%;
-  min-height: 400px;
+  width: 550px;
+  height: 350px;
+  min-height: unset;
   background: #d9d9d9;
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  overflow: hidden;
 }
-
 .texto-destacado {
-  width: 50%;
+  width: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.texto-destacado h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.texto-destacado p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 <<<<<<< HEAD
