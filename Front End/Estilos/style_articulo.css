@@ -7,9 +7,25 @@
 
 body {
   font-family: Barlow;
-  background-color: #ececec;
   padding: 20px;
+  background-image: linear-gradient(
+    180deg,
+    hsl(222deg 56% 92%) 0%,
+    hsl(216deg 70% 88%) 16%,
+    hsl(211deg 76% 82%) 28%,
+    hsl(206deg 79% 76%) 37%,
+    hsl(201deg 80% 67%) 46%,
+    hsl(201deg 92% 52%) 53%,
+    hsl(206deg 100% 49%) 60%,
+    hsl(212deg 100% 48%) 67%,
+    hsl(228deg 82% 54%) 73%,
+    hsl(228deg 72% 48%) 79%,
+    hsl(229deg 74% 42%) 86%,
+    hsl(229deg 76% 36%) 92%,
+    hsl(228deg 79% 31%) 100%
+  );
 }
+
 /* Fecha */
 #fecha {
   position: absolute;

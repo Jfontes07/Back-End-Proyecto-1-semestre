@@ -10,20 +10,42 @@
     <div class="decoracion-esfera"></div>
 
     <main class="contenedor">
-      <header>
-        <div>26/05/2026</div>
+      <header class="rv-header">
+        <div class="rv-top">
+          <!-- Izquierda: fecha y edición -->
+          <div class="rv-meta">
+            <span class="rv-date" id="rv-fecha"></span>
+            <span class="rv-edition">😊 <span id="rv-edicion">319</span></span>
+          </div>
 
-        <div>Revistas Uruguayas</div>
+          <!-- Centro: logo / título de la revista -->
+          <!-- 
+      FUTURO: reemplazar el <h1> por:
+      <img src="logo.png" alt="Esencia Uruguaya" class="rv-logo-img" />
+    -->
+          <div class="rv-title-center">
+            <h1 class="rv-logo-text">Esencia Uruguaya</h1>
+            <div class="rv-subtitle">edición digital · montevideo</div>
+          </div>
 
-        <div id="contador">😀 319</div>
+          <!-- Derecha: clima -->
+          <div class="rv-clima">
+            <span class="rv-temp" id="rv-temp">--°C</span>
+            <span class="rv-loc">📍 Montevideo</span>
+            <span class="rv-cond" id="rv-cond"></span>
+          </div>
+        </div>
+
+        <!-- Buscador -->
+        <div class="rv-search-row">
+          <input type="text" placeholder="Buscar artículo..." />
+        </div>
+
+        <div class="rv-line"></div>
       </header>
 
-      <section class="buscador">
-        <input type="search" placeholder="Buscar artículo..." />
-      </section>
-
       <section class="seccion-titulo">
-        <h2>Novedades</h2>
+        <h2>Mientras tanto en el Mundo</h2>
       </section>
 
       <section class="noticia-destacada">
@@ -101,5 +123,6 @@
       <footer class="footer">© 2026 Revista Digital</footer>
     </main>
     <script src="noticias.js"></script>
+    <script src="/BackEnd/api-clima/app.js"></script>
   </body>
 </html>
