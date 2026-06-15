@@ -392,6 +392,23 @@
 
 body {
   font-family: "Barlow", sans-serif;
+
+  background-image: linear-gradient(
+    180deg,
+    hsl(222deg 56% 92%) 0%,
+    hsl(216deg 70% 88%) 16%,
+    hsl(211deg 76% 82%) 28%,
+    hsl(206deg 79% 76%) 37%,
+    hsl(201deg 80% 67%) 46%,
+    hsl(201deg 92% 52%) 53%,
+    hsl(206deg 100% 49%) 60%,
+    hsl(212deg 100% 48%) 67%,
+    hsl(228deg 82% 54%) 73%,
+    hsl(228deg 72% 48%) 79%,
+    hsl(229deg 74% 42%) 86%,
+    hsl(229deg 76% 36%) 92%,
+    hsl(228deg 79% 31%) 100%
+  );
 }
 
 .contenedor-caratula {
@@ -440,4 +457,127 @@ h1 {
 .fecha {
   font-size: 0.9rem;
   color: #8da9c4;
+}
+
+* ── Header principal ── */ .rv-header {
+  background: #c8cde0;
+  padding: 10px 18px 0 18px;
+}
+
+/* ── Fila superior: meta | logo | clima ── */
+.rv-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+/* ── Izquierda: fecha y edición ── */
+.rv-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 100px;
+}
+
+.rv-date {
+  font-size: 11px;
+  color: #5a5f75;
+}
+
+.rv-edition {
+  font-size: 11px;
+  color: #5a5f75;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Centro: logo / nombre de revista ── */
+.rv-title-center {
+  flex: 1;
+  text-align: center;
+  padding-top: 2px;
+}
+
+/* Texto provisional — reemplazar con <img> cuando tengas el PNG */
+.rv-logo-text {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #1e2133;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+/* Clase lista para cuando agregues el PNG:
+   <img src="logo.png" alt="Esencia Uruguaya" class="rv-logo-img" /> */
+.rv-logo-img {
+  max-height: 48px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.rv-subtitle {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #5a5f75;
+  margin-top: 3px;
+}
+
+/* ── Derecha: clima ── */
+.rv-clima {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  min-width: 80px;
+}
+
+.rv-temp {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2a2d3e;
+  line-height: 1;
+}
+
+.rv-loc {
+  font-size: 10px;
+  color: #7a7f96;
+}
+
+.rv-cond {
+  font-size: 10px;
+  color: #7a7f96;
+}
+
+/* ── Buscador ── */
+.rv-search-row {
+  margin-bottom: 0;
+}
+
+.rv-search-row input {
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  background: white;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #555;
+  outline: none;
+}
+
+.rv-search-row input::placeholder {
+  color: #aaa;
+}
+
+/* ── Línea verde inferior ── */
+.rv-line {
+  height: 4px;
+  background: #6abf69;
+  margin-top: 10px;
 }
