@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "Barlow";
+    src: url("../fonts/Barlow-Regular.ttf") format("truetype");
+}
+
+** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    background-image: linear-gradient(
+        180deg,
+        hsl(222deg 56% 92%) 0%,
+        hsl(216deg 70% 88%) 16%,
+        hsl(211deg 76% 82%) 28%,
+        hsl(206deg 79% 76%) 37%,
+        hsl(201deg 80% 67%) 46%,
+        hsl(201deg 92% 52%) 53%,
+        hsl(206deg 100% 49%) 60%,
+        hsl(212deg 100% 48%) 67%,
+        hsl(228deg 82% 54%) 73%,
+        hsl(228deg 72% 48%) 79%,
+        hsl(229deg 74% 42%) 86%,
+        hsl(229deg 76% 36%) 92%,
+        hsl(228deg 79% 31%) 100%
+    );
+}
+
+.contenedor {
+    max-width: 700px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: hsl(229deg 76% 36%);
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: hsl(228deg 72% 48%);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(229deg 76% 36%);
+}
+
+.inicio {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: hsl(229deg 76% 36%);
+    font-weight: bold;
+}
