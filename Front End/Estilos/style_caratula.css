@@ -540,7 +540,7 @@ h1 {
 /* Clase lista para cuando agregues el PNG:
    <img src="logo.png" alt="Esencia Uruguaya" class="rv-logo-img" /> */
 .rv-logo-img {
-  max-height: 48px;
+  max-height: 100px;
   width: auto;
   display: block;
   margin: 0 auto;
@@ -598,11 +598,4 @@ h1 {
 
 .rv-search-row input::placeholder {
   color: #aaa;
-}
-
-/* ── Línea verde inferior ── */
-.rv-line {
-  height: 4px;
-  background: #6abf69;
-  margin-top: 10px;
 }
