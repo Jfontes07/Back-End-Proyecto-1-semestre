@@ -509,7 +509,11 @@ h1 {
 .rv-date {
   font-size: 11px;
   color: #5a5f75;
-
+  /* PARA REVISAR SI GUSTA, QUEDA COMENTADO 
+  font-weight: bold;        
+  font-family: "Barlow", sans-serif;       
+  letter-spacing: 1px;     
+  text-transform: uppercase;  */
 }
 
 .rv-edition {
