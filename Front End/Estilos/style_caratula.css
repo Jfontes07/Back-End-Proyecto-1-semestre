@@ -580,6 +580,11 @@ height: 60px;
   font-size: 12px;
   color: #222;
   white-space: nowrap;
+   font-weight: bold;
+    font-family: "Barlow", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
 }
 
 .rv-visitas {
