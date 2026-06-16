@@ -496,123 +496,186 @@ h1 {
   color: #8da9c4;
 }
 
-* ── Header principal ── */ .rv-header {
-  background: #c8cde0;
-  padding: 10px 18px 0 18px;
+/* ── HEADER WRAPPER ─────────────────────────────── */
+.rv-header {
+  width: 100%;
+  border-bottom: 2px solid #1a1a1a;
 }
 
-/* ── Fila superior: meta | logo | clima ── */
-.rv-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
-/* ── Izquierda: fecha y edición ── */
-.rv-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 100px;
-}
-
-.rv-date {
-  font-size: 11px;
-  color: #5a5f75;
-  /* PARA REVISAR SI GUSTA, QUEDA COMENTADO 
-  font-weight: bold;        
-  font-family: "Barlow", sans-serif;       
-  letter-spacing: 1px;     
-  text-transform: uppercase;  */
-}
-
-.rv-edition {
-  font-size: 11px;
-  color: #5a5f75;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-/* ── Centro: logo / nombre de revista ── */
+/* ── TÍTULO (más chico) ─────────────────────────── */
 .rv-title-center {
-  flex: 1;
   text-align: center;
-  padding-top: 2px;
+  padding: 10px 0 6px;
 }
 
-/* Texto provisional — reemplazar con <img> cuando tengas el PNG */
-.rv-logo-text {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #1e2133;
-  line-height: 1;
-  font-family: Georgia, serif;
-}
-/* imagen del titulo */
 .rv-logo-img {
-  max-height: 100px;
+  height: 200px;
   width: auto;
   display: block;
   margin: 0 auto;
 }
 
 .rv-subtitle {
-  font-size: 9px;
-  letter-spacing: 2.5px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #5a5f75;
+  color: #1b1b1b;
   margin-top: 3px;
 }
 
-/* ── Derecha: clima ── */
+/* ── NAV: fila de boxes ─────────────────────────── */
+.rv-nav {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, rgba(200, 220, 245, 0.35) 0%, rgba(255, 255, 255, 0.2) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(180, 200, 230, 0.4);
+}
+
+/* ── BOX individual ─────────────────────────────── */
+.rv-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+ padding: 4px 14px;
+height: 60px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 2px 8px rgba(100, 140, 200, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rv-nav-item:hover {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 4px 14px rgba(100, 140, 200, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* ── Label superior de cada box ─────────────────── */
+.rv-nav-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(80, 110, 160, 0.8);
+  white-space: nowrap;
+}
+
+/* ── Contenido de cada box ──────────────────────── */
+.rv-date {
+  font-size: 12px;
+  color: #222;
+  white-space: nowrap;
+}
+
+.rv-visitas {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.rv-badge {
+  height: 20px;
+  vertical-align: middle;
+}
+
+.rv-audio {
+  width: 160px;
+  height: 28px;
+}
+
+.rv-nav-search {
+  flex: 1;
+  min-width: 160px;
+  max-width: 260px;
+}
+
+.rv-input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  outline: none;
+  box-sizing: border-box;
+  color: #222;
+}
+
+.rv-input::placeholder {
+  color: rgba(80, 100, 140, 0.6);
+}
+
+.rv-input:focus {
+  border-color: rgba(74, 144, 217, 0.7);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.rv-edition {
+  font-size: 12px;
+  color: #222;
+}
+
 .rv-clima {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
-  min-width: 80px;
+  align-items: center;
+  gap: 1px;
 }
 
 .rv-temp {
-  font-size: 16px;
-  font-weight: 600;
-  color: #2a2d3e;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
   line-height: 1;
 }
 
 .rv-loc {
   font-size: 10px;
-  color: #7a7f96;
+  color: #555;
 }
 
 .rv-cond {
   font-size: 10px;
-  color: #7a7f96;
+  color: #777;
 }
 
-/* ── Buscador ── */
-.rv-search-row {
-  margin-bottom: 0;
+/* ── Línea separadora final ─────────────────────── */
+.rv-line {
+  height: 2px;
+  background: #1a1a1a;
+  margin-top: 0;
 }
 
-.rv-search-row input {
-  width: 100%;
-  border-radius: 20px;
-  border: none;
-  background: white;
-  padding: 8px 16px;
-  font-size: 13px;
-  color: #555;
-  outline: none;
-}
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 640px) {
+  .rv-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
 
-.rv-search-row input::placeholder {
-  color: #aaa;
+  .rv-nav-item {
+    min-width: 80px;
+    flex-shrink: 0;
+  }
 }
 
 .bg {
@@ -647,4 +710,45 @@ h1 {
   100% {
     transform: translateX(25%);
   }
+}
+
+
+/*eso es el pop*/
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background: #fff;
+  border-radius: 12px;
+  width: 340px;
+  overflow: hidden;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.popup img {
+  width: 100%;
+  display: block;
 }
