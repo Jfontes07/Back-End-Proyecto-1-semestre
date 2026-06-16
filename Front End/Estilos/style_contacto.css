@@ -1,53 +1,57 @@
 @font-face {
     font-family: "Barlow";
-    src: url("../fonts/TT Berlinerins Trial Script.otf");
+    src: url(Front End/fonts/Barlow-Regular.ttf);
 }
 
-** {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    font-family: "Barlow", sans-serif;
     min-height: 100vh;
     padding: 40px 20px;
 
     background-image: linear-gradient(
         180deg,
-        hsl(222deg 56% 92%) 0%,
-        hsl(216deg 70% 88%) 16%,
-        hsl(211deg 76% 82%) 28%,
-        hsl(206deg 79% 76%) 37%,
-        hsl(201deg 80% 67%) 46%,
-        hsl(201deg 92% 52%) 53%,
-        hsl(206deg 100% 49%) 60%,
-        hsl(212deg 100% 48%) 67%,
-        hsl(228deg 82% 54%) 73%,
-        hsl(228deg 72% 48%) 79%,
-        hsl(229deg 74% 42%) 86%,
-        hsl(229deg 76% 36%) 92%,
-        hsl(228deg 79% 31%) 100%
+        #eaeaea 0%,
+        #c8cde0 35%,
+        #8da9c4 70%,
+        #165e8e 100%
     );
 }
 
 .contenedor {
     max-width: 700px;
     margin: auto;
-    background: rgba(255, 255, 255, 0.95);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
     padding: 30px;
-    border-radius: 15px;
+
+    color: #1e2133;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: hsl(229deg 76% 36%);
+    color: #1e2133;
 }
 
 p {
     margin-bottom: 20px;
     line-height: 1.6;
+    color: #1e2133;
 }
 
 label {
@@ -55,34 +59,57 @@ label {
     margin-top: 15px;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #1e2133;
 }
 
 input,
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
+
+    color: #1e2133;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #165e8e;
 }
 
 button {
     margin-top: 20px;
     padding: 10px 20px;
+
     border: none;
     border-radius: 8px;
-    background-color: hsl(228deg 72% 48%);
+
+    background-color: #165e8e;
     color: white;
+
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: hsl(229deg 76% 36%);
+    background-color: #1e2133;
 }
 
 .inicio {
     display: inline-block;
     margin-top: 20px;
+
     text-decoration: none;
-    color: hsl(229deg 76% 36%);
+    color: #165e8e;
     font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.inicio:hover {
+    color: #1e2133;
 }
