@@ -259,6 +259,7 @@
   position: relative;
   height: 200px;
   width: 100%;
+  display: flex;
 }
 
 .card__side {
@@ -280,7 +281,7 @@
 }
 
 .card__side--front-1 {
-  background: linear-gradient(-45deg, #03b0f4, #eff1f3);
+  background: linear-gradient(-45deg, #04455f, #d8e0e4);
 }
 
 .card__side--back {
@@ -289,7 +290,7 @@
 }
 
 .card__side--back-1 {
-  background: linear-gradient(-45deg, #64b5f6, #03b0f4);
+  background: linear-gradient(-45deg, #38668b, #143d4d);
 }
 
 .card:hover .card__side--front-1 {
