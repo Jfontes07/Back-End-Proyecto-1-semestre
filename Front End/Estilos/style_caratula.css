@@ -579,12 +579,12 @@ height: 60px;
 /* ── Contenido de cada box ──────────────────────── */
 .rv-date {
   font-size: 12px;
-  color: #222; 
+  color: #222;
   white-space: nowrap;
   font-weight: bold;
-    font-family: "Barlow", sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .rv-visitas {
