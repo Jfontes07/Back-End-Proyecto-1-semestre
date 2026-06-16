@@ -76,3 +76,7 @@ p {
 .volver:hover {
     background-color: #1e2133;
 }
+
+footer {
+    text-align: center;
+}
