@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Barlow";
-    src: url(Front End/fonts/Barlow-Regular.ttf);
+    src: url(FrontEnd/fonts/Barlow-Regular.ttf);
 }
 
 * {
@@ -112,4 +112,8 @@ button:hover {
 
 .inicio:hover {
     color: #1e2133;
+}
+
+footer {
+    text-align: center;
 }
