@@ -584,6 +584,7 @@ height: 60px;
     font-family: "Barlow", sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgb(235, 231, 250);
     
 }
 
