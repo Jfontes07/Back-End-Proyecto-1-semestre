@@ -757,3 +757,16 @@ height: 60px;
   width: 100%;
   display: block;
 }
+/* Header sticky - cuando scrolleo el titulo baja tambienm*/
+.rv-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.rv-header.scrolled {
+  background: rgba(255, 255, 255, 0.356);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(100, 140, 200, 0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}

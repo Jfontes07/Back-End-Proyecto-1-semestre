@@ -6,12 +6,12 @@
     <title>Esencia Uruguaya</title>
     <link rel="stylesheet" href="estilos/style_caratula.css" />
   </head>
+
   <body>
-    <div id="inicio"></div>
-<main class="contenedor">
+
   <div id="inicio"></div>
-<main class="contenedor">
   <header class="rv-header">
+     <main class="contenedor"></main>
 
     <!-- TÍTULO CENTRADO -->
     <div class="rv-title-center">
@@ -210,5 +210,15 @@
     <div class="bg bg3"></div>
     <script src="noticias.js"></script>
     <script src="/BackEnd/api-clima/app.js"></script>
+    <script>
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.rv-header');
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
   </body>
 </html>
