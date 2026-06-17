@@ -12,3 +12,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log(datos);
   } catch (e) {}
 });
+window.addEventListener("scroll", () => {
+  const titulo = document.querySelector(".rv-title-center");
+  if (window.scrollY > 10) {
+    titulo.classList.add("scrolled");
+  } else {
+    titulo.classList.remove("scrolled");
+  }
+});
