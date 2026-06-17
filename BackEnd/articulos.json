@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "tituloPrincipal": "Carnaval",
+    "subtitulo": "Subtítulo del artículo",
+    "fecha": "2025-01-01",
+    "autor": "Nombre Apellido",
+    "contenido": "Contenido del artículo.",
+    "descripcion": "Descripción breve del artículo."
+  }
+]
