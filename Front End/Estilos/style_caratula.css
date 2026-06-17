@@ -773,8 +773,28 @@ h1 {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 4px 20px rgba(100, 140, 200, 0.15);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .btn-btn--white {
   height: 10px;
+}
+
+.rv-nav-redaccion {
+  margin-left: 6px;
+}
+
+.btn-crear {
+  background-color: #0e0e0f;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.btn-crear:hover {
+  background-color: #0a0a0a;
 }
