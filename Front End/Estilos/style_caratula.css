@@ -763,11 +763,15 @@ h1 {
   display: block;
 }
 /* Header sticky - cuando scrolleo el titulo baja tambienm*/
-.rv-header {
+.rv-title-center {
+  text-align: center;
+  padding: 10px 0 6px;
   position: sticky;
   top: 0;
   z-index: 100;
+  background: white; /* o el color que prefieras */
 }
+
 .rv-header.scrolled {
   background: rgba(255, 255, 255, 0.356);
   backdrop-filter: blur(16px);
