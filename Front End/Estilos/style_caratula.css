@@ -503,17 +503,17 @@ h1 {
   border-bottom: 2px solid #1a1a1a;
 }
 
-/* ── TÍTULO (más chico) ─────────────────────────── */
-.rv-title-center {
-  text-align: center;
-  padding: 10px 0 6px;
-}
-
 .rv-logo-img {
   height: 200px;
   width: auto;
   display: block;
   margin: 0 auto;
+  transition: transform .25s ease;
+  transform-origin: center center;
+}
+
+.rv-title-center.scrolled .rv-logo-img {
+  transform: scale(.7);
 }
 
 .rv-subtitle {
@@ -762,15 +762,7 @@ h1 {
   width: 100%;
   display: block;
 }
-/* Header sticky - cuando scrolleo el titulo baja tambienm*/
-.rv-title-center {
-  text-align: center;
-  padding: 10px 0 6px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: white; /* o el color que prefieras */
-}
+
 
 .rv-header.scrolled {
   background: rgba(255, 255, 255, 0.356);
@@ -802,20 +794,43 @@ h1 {
 .btn-crear:hover {
   background-color: #0a0a0a;
 }
+
+
+
+/* ===== TITULO STICKY ===== */
+
 .rv-title-center {
   text-align: center;
   padding: 10px 0 6px;
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.096);
+
+  background: rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 4px 20px rgba(100, 140, 200, 0.12);
-}
-.rv-title-center.scrolled {
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 4px 24px rgba(100, 140, 200, 0.2);
+
   transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rv-title-center.scrolled {
+  background: rgba(255, 255, 255, 0.26);
+  box-shadow: 0 4px 24px rgba(100, 140, 200, 0.2);
+}
+
+.rv-logo-img {
+  height: 200px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+.rv-title-center.scrolled .rv-logo-img {
+  height: 100px;
 }
