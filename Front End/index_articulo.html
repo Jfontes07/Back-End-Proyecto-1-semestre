@@ -5,26 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Esencia Uruguaya</title>
     <link rel="stylesheet" href="estilos/style_articulo.css" />
+    <link rel="stylesheet" href="estilos/style_caratula.css" />
   </head>
+
   <body>
+    <div id="inicio"></div>
+
+<div class="rv-title-center">
+  <img src="Fotos/123194-Photoroom.png" alt="Esencia Uruguaya" class="rv-logo-img" />
+  <div class="rv-subtitle">edición digital · montevideo</div>
+</div>
+
+<header class="rv-header">
+  <nav class="rv-nav">
+    <div class="rv-nav-item">
+      <span class="rv-nav-label">Fecha</span>
+      <span class="rv-date" id="rv-fecha"></span>
+    </div>
+    <div class="rv-nav-item">
+      <span class="rv-nav-label">Visitas</span>
+      <div class="rv-visitas">
+        👀
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=escencia-uruguaya&left_color=7bafd4&right_color=4a90d9&left_text=visitas" class="rv-badge" />
+      </div>
+    </div>
+    <div class="rv-nav-item">
+      <span class="rv-nav-label">Música</span>
+      <audio autoplay loop controls class="rv-audio">
+        <source src="musica/rada.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+    <div class="rv-nav-item">
+      <span class="rv-nav-label">Clima</span>
+      <div class="rv-clima">
+        <span class="rv-temp" id="rv-temp">--°C</span>
+        <span class="rv-loc">📍 Montevideo</span>
+        <span class="rv-cond" id="rv-cond"></span>
+      </div>
+    </div>
+    <div class="rv-nav-item rv-nav-redaccion">
+      <span class="rv-nav-label">Redacción</span>
+      <a href="form/index.html" class="btn-crear">Nuevo artículo</a>
+    </div>
+  </nav>
+  <div class="rv-line"></div>
+</header>
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
     <div class="contenedor">
-      <div id="inicio"></div>
-
-      <div class="rv-title-center">
-        <img
-          src="Fotos/123194-Photoroom.png"
-          alt="Esencia Uruguaya"
-          class="rv-logo-img"
-        />
-        <div class="rv-subtitle">edición digital · montevideo</div>
-      </div>
-
-      <header class="rv-header">
-        <main class="contenedor"></main>
-        <div class="rv-line"></div>
       </header>
 
       <main>
@@ -56,5 +85,25 @@
     </div>
 
     <script src="indexarticulo.js"></script>
+    <script src="/BackEnd/api-clima/app.js"></script>
+<script>
+  const fecha = new Date();
+  document.getElementById('rv-fecha').textContent =
+    fecha.toLocaleDateString('es-UY', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+</script>
+<script>
+  const titleCenter = document.querySelector('.rv-title-center');
+  const header = document.querySelector('.rv-header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      titleCenter.classList.add('scrolled');
+      header.classList.add('scrolled');
+    } else {
+      titleCenter.classList.remove('scrolled');
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
   </body>
 </html>
