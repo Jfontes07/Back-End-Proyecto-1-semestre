@@ -1,3 +1,32 @@
+/* nevas fuentes*/
+@font-face {
+  font-family: "RealisticNature";
+  src: url("../fonts/Realistic Nature.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RelationshipMelodrame";
+  src: url("../fonts/Relationship of Melodrame.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scaver";
+  src: url("../fonts/Scaver-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scaver";
+  src: url("../fonts/Scaver-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
