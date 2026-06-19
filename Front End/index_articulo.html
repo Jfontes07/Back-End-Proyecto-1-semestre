@@ -95,13 +95,24 @@
   const titleCenter = document.querySelector('.rv-title-center');
   const header = document.querySelector('.rv-header');
 
+  let ticking = false;
+  const umbralOn = 80;
+  const umbralOff = 40;
+
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      titleCenter.classList.add('scrolled');
-      header.classList.add('scrolled');
-    } else {
-      titleCenter.classList.remove('scrolled');
-      header.classList.remove('scrolled');
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        if (y > umbralOn) {
+          titleCenter.classList.add('scrolled');
+          header.classList.add('scrolled');
+        } else if (y < umbralOff) {
+          titleCenter.classList.remove('scrolled');
+          header.classList.remove('scrolled');
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   });
 </script>

@@ -821,6 +821,7 @@ h1 {
 .rv-title-center.scrolled {
   background: rgba(255, 255, 255, 0.26);
   box-shadow: 0 4px 24px rgba(100, 140, 200, 0.2);
+  padding: 4px 0 2px;
 }
 
 .rv-logo-img {
@@ -833,6 +834,3 @@ h1 {
   transform-origin: center center;
 }
 
-.rv-title-center.scrolled .rv-logo-img {
-  height: 100px;
-}
