@@ -6,7 +6,9 @@ const cors = require("cors");
 const app = express();
 
 const PORT = process.env.PORT || 3000;
-const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://localhost:5500"  ;
+const CORS_ORIGIN = (process.env.CORS_ORIGIN || "http://localhost:5500,http://127.0.0.1:5500")
+  .split(",")
+  .map((origen) => origen.trim())  ;
 // ── MIDDLEWARES ──────────────────────────────────────────
 app.use(cors({ origin: CORS_ORIGIN }));
 app.use(express.json());
