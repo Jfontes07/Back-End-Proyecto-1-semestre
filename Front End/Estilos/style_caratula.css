@@ -304,37 +304,30 @@
 }
 
 .imagen_art {
-  width: 120px;
-  height: 120px;
-  min-width: 120px;
+  width: 250px;
+  height: 200px;
+  min-width: 250px;
   background: rgba(255, 255, 255, 0.35);
   border-radius: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items:center;
+   justify-content: center;
+   padding: 1px;
 }
 
+.imagen_art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 1px;
+  padding: 1px;
+  border-radius: 10px;
+}
 .card__info-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 6px;
-}
-
-.card__details {
-  padding: 0 2rem 2rem;
-}
-
-.card__details ul {
-  list-style: none;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.card__details ul li {
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 1rem;
 }
 
 .card__details ul li:not(:last-child) {
@@ -344,12 +337,6 @@
 .card__cta {
   width: 90%;
   text-align: center;
-}
-
-.card__price-box {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 8rem;
 }
 
 .card_info {
@@ -402,7 +389,19 @@
   text-align: center;
   font-size: 1.5rem;
   padding: 1rem;
+  
 }
+.card__info-content p {
+color:#221f1f;
+}
+
+.articulo-horizontal  p {
+  color:#000000;
+ background: #e9e9e941;
+  border-radius: 12px;
+}
+
+
 /* Ajuste imagen noticia destacada */
 .imagen-destacada {
   overflow: hidden;
@@ -432,23 +431,6 @@
 
 body {
   font-family: "Barlow", sans-serif;
-
-  /* background-image: linear-gradient(
-    180deg,
-    hsl(222deg 56% 92%) 0%,
-    hsl(216deg 70% 88%) 16%,
-    hsl(211deg 76% 82%) 28%,
-    hsl(206deg 79% 76%) 37%,
-    hsl(201deg 80% 67%) 46%,
-    hsl(201deg 92% 52%) 53%,
-    hsl(206deg 100% 49%) 60%,
-    hsl(212deg 100% 48%) 67%,
-    hsl(228deg 82% 54%) 73%,
-    hsl(228deg 72% 48%) 79%,
-    hsl(229deg 74% 42%) 86%,
-    hsl(229deg 76% 36%) 92%,
-    hsl(228deg 79% 31%) 100%
-  );*/
 }
 
 .contenedor-caratula {
@@ -739,7 +721,7 @@ h1 {
 .popup {
   background: #fff;
   border-radius: 12px;
-  width: 340px;
+  width: 500px;
   overflow: hidden;
   position: relative;
 }
@@ -776,7 +758,7 @@ h1 {
     box-shadow 0.3s ease;
 }
 .btn-btn--white {
-  height: 10px;
+  height: 20px;
 }
 
 .rv-nav-redaccion {
