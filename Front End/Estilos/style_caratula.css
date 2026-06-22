@@ -154,7 +154,7 @@
 
 .articulos-verticales {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   margin-bottom: 30px;
 }
@@ -310,9 +310,9 @@
   background: rgba(255, 255, 255, 0.35);
   border-radius: 10px;
   display: flex;
-  align-items:center;
-   justify-content: center;
-   padding: 1px;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
 }
 
 .imagen_art img {
@@ -389,18 +389,16 @@
   text-align: center;
   font-size: 1.5rem;
   padding: 1rem;
-  
 }
 .card__info-content p {
-color:#221f1f;
+  color: #221f1f;
 }
 
-.articulo-horizontal  p {
-  color:#000000;
- background: #e9e9e941;
+.articulo-horizontal p {
+  color: #000000;
+  background: #e9e9e941;
   border-radius: 12px;
 }
-
 
 /* Ajuste imagen noticia destacada */
 .imagen-destacada {
@@ -492,12 +490,12 @@ h1 {
   width: auto;
   display: block;
   margin: 0 auto;
-  transition: transform .25s ease;
+  transition: transform 0.25s ease;
   transform-origin: center center;
 }
 
 .rv-title-center.scrolled .rv-logo-img {
-  transform: scale(.7);
+  transform: scale(0.7);
 }
 
 .rv-subtitle {
@@ -747,7 +745,6 @@ h1 {
   display: block;
 }
 
-
 .rv-header.scrolled {
   background: rgba(255, 255, 255, 0.356);
   backdrop-filter: blur(16px);
@@ -779,8 +776,6 @@ h1 {
   background-color: #0a0a0a;
 }
 
-
-
 /* ===== TITULO STICKY ===== */
 
 .rv-title-center {
@@ -790,14 +785,16 @@ h1 {
   top: 0;
   z-index: 100;
 
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 4px 20px rgba(100, 140, 200, 0.12);
 
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .rv-title-center.scrolled {
