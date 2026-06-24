@@ -46,7 +46,7 @@ function pintarSeccion(selector, lista) {
         <div class="card">
           <div class="card__side card__side--front-1">
             <div class="imagen_art">
-              <img src="Fotos/Carnaval.jpg" alt="${articulo.tituloPrincipal}" />
+              <img src="${articulo.imagen1 || "Fotos/Carnaval.jpg"}" alt="${articulo.tituloPrincipal}" />
             </div>
             <div class="card__info-content">
               <p class="card__title">${articulo.tituloPrincipal}</p>
@@ -54,7 +54,7 @@ function pintarSeccion(selector, lista) {
             </div>
           </div>
           <div class="card__side card__side--back card__side--back-1">
-          <p class="card__desc">${articulo.descripcion}</p>
+            <p class="card__desc">${articulo.descripcion}</p>
             <div class="card__cta">
               <button class="btn-btn--white">Ver artículo</button>
             </div>
