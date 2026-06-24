@@ -180,15 +180,14 @@ button:hover {
 .footer-container {
     display: grid;
     grid-template-columns: 1.3fr 1fr 1fr 2fr;
-    gap: 40px;
+    gap: 30px;
 }
 
-
 .footer-brand h2 {
-    font-family: "Times New Roman", serif;
+    font-family: "Barlow", sans-serif;
     font-size: 3rem;
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 10px;
     margin-bottom: -10px;
 }
 
@@ -196,7 +195,7 @@ button:hover {
     font-family: cursive;
     font-size: 2.2rem;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 .linea {
@@ -220,8 +219,8 @@ button:hover {
 }
 
 .footer-col h3 {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
     color: black;
     letter-spacing: 1px;
 }
@@ -229,8 +228,9 @@ button:hover {
 .footer-col a {
     text-decoration: none;
     color: black;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     transition: 0.3s;
+    font-size: 1.1rem;
 }
 
 .footer-col a:hover {
@@ -276,8 +276,8 @@ button:hover {
 /* Footer inferior */
 
 .footer-bottom {
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
     border-top: 1px solid rgba(255,255,255,0.15);
 
     display: flex;
