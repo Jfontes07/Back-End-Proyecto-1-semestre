@@ -7,5 +7,16 @@
     "autor": "Nombre Apellido",
     "contenido": "Contenido del artículo.",
     "descripcion": "Descripción breve del artículo."
+  },
+  {
+    "id": 2,
+    "tituloPrincipal": "El asado",
+    "subtitulo": "Un manjar de los dioses",
+    "fecha": "2026-06-23",
+    "autor": "Jonathan Fontes",
+    "contenido": "qs",
+    "descripcion": "adasd",
+    "imagen1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzj4yRLTpe3tYDTmjuxc8voe6CcqofXKGxGrvZsg7MeQ&s=10",
+    "imagen2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSzwkzAuOGCMN4SH2Hkg_KEScZjo2Ql-YkaLvjhTHOaw&s=10"
   }
 ]

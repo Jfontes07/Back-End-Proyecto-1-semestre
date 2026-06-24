@@ -28,15 +28,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Pintar los datos en el DOM
     document.getElementById("tituloPrincipal").textContent =
-      datos.tituloPrincipal;
-    document.getElementById("subtitulo").textContent = datos.subtitulo || "";
-    document.getElementById("contenido").textContent = datos.contenido || "";
-    document.getElementById("autor").textContent = datos.autor
-      ? `Por ${datos.autor}`
-      : "";
+  datos.tituloPrincipal;
+document.getElementById("subtitulo").textContent = datos.subtitulo || "";
+document.getElementById("contenido").textContent = datos.contenido || "";
+document.getElementById("autor").textContent = datos.autor
+  ? `Por ${datos.autor}`
+  : "";
 
-    // Si en el futuro guardás imágenes, acá las asignás:
-    // document.getElementById("Imagen1").src = datos.imagen1;
+// Mostrar imágenes si existen
+if (datos.imagen1) {
+  document.getElementById("Imagen1").src = datos.imagen1;
+}
+if (datos.imagen2) {
+  document.getElementById("Imagen2").src = datos.imagen2;
+}
 
     document.title = datos.tituloPrincipal + " · Esencia Uruguaya";
   } catch (e) {

@@ -74,16 +74,27 @@
           ></textarea>
         </div>
 
-        <div id="campo-imagenes">
-          <label for="imagenes">Imágenes del artículo</label>
-          <input
-            type="file"
-            id="imagenes"
-            name="imagenes"
-            accept="image/*"
-            multiple
-          />
-        </div>
+     <div id="campo-imagenes">
+  <label for="imagen1">URL Imagen 1</label>
+  <input
+    type="url"
+    class="campo"
+    placeholder="https://..."
+    id="imagen1"
+    name="imagen1"
+  />
+
+  <label for="imagen2">URL Imagen 2</label>
+  <input
+    type="url"
+    class="campo"
+    placeholder="https://..."
+    id="imagen2"
+    name="imagen2"
+  />
+
+  <div id="listaImagenes"></div>
+</div>
 
         <div id="campo-bibliografa">
           <label for="bibliografia">Bibliografía o fuente</label>
