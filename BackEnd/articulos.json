@@ -1,48 +1,6 @@
 [
   {
     "id": 1,
-    "tituloPrincipal": "Carnaval",
-    "subtitulo": "Subtítulo del artículo",
-    "fecha": "2025-01-01",
-    "autor": "Nombre Apellido",
-    "contenido": "Contenido del artículo.",
-    "descripcion": "Descripción breve del artículo."
-  },
-  {
-    "id": 2,
-    "tituloPrincipal": "El asado",
-    "subtitulo": "Un manjar de los dioses",
-    "fecha": "2026-06-23",
-    "autor": "Jonathan Fontes",
-    "contenido": "qs",
-    "descripcion": "adasd",
-    "imagen1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzj4yRLTpe3tYDTmjuxc8voe6CcqofXKGxGrvZsg7MeQ&s=10",
-    "imagen2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSzwkzAuOGCMN4SH2Hkg_KEScZjo2Ql-YkaLvjhTHOaw&s=10"
-  },
-  {
-    "id": 3,
-    "tituloPrincipal": "El asado",
-    "subtitulo": "Un manjar de los dioses",
-    "fecha": "2026-06-23",
-    "autor": "Jonathan Fonteswdw",
-    "contenido": "asedfased",
-    "descripcion": "adfaed",
-    "imagen1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzj4yRLTpe3tYDTmjuxc8voe6CcqofXKGxGrvZsg7MeQ&s=10",
-    "imagen2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSzwkzAuOGCMN4SH2Hkg_KEScZjo2Ql-YkaLvjhTHOaw&s=10"
-  },
-  {
-    "id": 4,
-    "tituloPrincipal": "El asado",
-    "subtitulo": "Un manjar de los dioses",
-    "fecha": "2026-06-23",
-    "autor": "Jonathan Fontes",
-    "contenido": "s",
-    "descripcion": "asddas",
-    "imagen1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzj4yRLTpe3tYDTmjuxc8voe6CcqofXKGxGrvZsg7MeQ&s=10",
-    "imagen2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSzwkzAuOGCMN4SH2Hkg_KEScZjo2Ql-YkaLvjhTHOaw&s=10"
-  },
-  {
-    "id": 5,
     "tituloPrincipal": "La Rambla",
     "subtitulo": "La Rambla",
     "fecha": "2026-06-24",
@@ -53,7 +11,7 @@
     "imagen2": "https://s3.amazonaws.com/cdn.matadornetwork.com/blogs/1/2019/05/Montevideo-sign-in-Uruguays-capital-1200x748.jpg"
   },
   {
-    "id": 6,
+    "id": 2,
     "tituloPrincipal": "El origen de la tradición Gaucha",
     "subtitulo": "El Gaucho, el Folclore y la Milonga",
     "fecha": "2026-06-24",
@@ -62,5 +20,27 @@
     "descripcion": "El Gaucho, sus orígenes cultura, folclore y Milonga",
     "imagen1": "https://www.tacuaremboturismo.gub.uy/media/2023/12/elgaucho.jpg",
     "imagen2": "https://uruguayeduca.anep.edu.uy/sites/default/files/styles/wide/public/2020-09/Carlos_Morel_-_Payada_en_una_pulper%C3%ADa.jpg?itok=9Cs1R2Ge"
+  },
+  {
+    "id": 3,
+    "tituloPrincipal": "asado",
+    "subtitulo": "okufu",
+    "fecha": "2026-06-25",
+    "autor": "jon",
+    "contenido": "sdgsdsfg",
+    "descripcion": "srgfsfr",
+    "imagen1": "",
+    "imagen2": ""
+  },
+  {
+    "id": 4,
+    "tituloPrincipal": "hola",
+    "subtitulo": "asa",
+    "fecha": "2026-06-25",
+    "autor": "jon",
+    "contenido": "dtdfgdfgdfg",
+    "descripcion": "drgdtrydrt",
+    "imagen1": "",
+    "imagen2": ""
   }
 ]

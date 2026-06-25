@@ -185,7 +185,7 @@
 
 .articulos-horizontales {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
 }
 
@@ -207,6 +207,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Si el total de artículos es impar (1, 3, 5, 7...), el más nuevo
+   (primero en el DOM) se despega arriba ocupando las 2 columnas,
+   y el resto sigue abajo respetando el 2 y 2. Es puro CSS: no hace
+   falta marcar nada especial desde el JS. */
+.articulos-horizontales
+  .articulo-horizontal:first-child:nth-last-child(2n + 1) {
+  grid-column: 1 / -1;
 }
 
 /* FOOTER */
@@ -235,16 +244,18 @@
     grid-template-columns: 1fr;
   }
 
-  .articulos-horizontales {
-    grid-template-columns: 1fr;
-  }
-
   .articulo-horizontal {
     flex-direction: column;
   }
 
   .imagen-horizontal {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .articulos-horizontales {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -604,7 +615,9 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.15s ease, transform 0.1s ease;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
   color: #1a1a1a;
 }
 
@@ -669,7 +682,7 @@ h1 {
 .rv-edition {
   font-size: 12px;
   color: #222;
-} 
+}
 
 .rv-clima {
   display: flex;
@@ -862,165 +875,163 @@ h1 {
 ========================== */
 
 .footer {
-    margin-top: 60px;
-    margin-left: -20px;
-    margin-right: -20px;
-    background: linear-gradient(
-        180deg,
-        rgba(191, 213, 236, 0.95),
-        rgba(6, 51, 97, 0.98)
-    );
-    backdrop-filter: blur(10px);
-    color: black;
-    padding: 50px 40px 20px;
-    border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 60px;
+  margin-left: -20px;
+  margin-right: -20px;
+  background: linear-gradient(
+    180deg,
+    rgba(191, 213, 236, 0.95),
+    rgba(6, 51, 97, 0.98)
+  );
+  backdrop-filter: blur(10px);
+  color: black;
+  padding: 50px 40px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr 2fr;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 2fr;
+  gap: 30px;
 }
 
 .footer-brand h2 {
-    font-family: "Barlow", sans-serif;
-    font-size: 3rem;
-    font-weight: 300;
-    letter-spacing: 10px;
-    margin-bottom: -10px;
+  font-family: "Barlow", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin-bottom: -10px;
 }
 
 .footer-brand span {
-    font-family: cursive;
-    font-size: 2.2rem;
-    display: block;
-    margin-bottom: 50px;
+  font-family: cursive;
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 50px;
 }
 
 .linea {
-    width: 70px;
-    height: 2px;
-    background: rgba(255,255,255,0.4);
-    margin-bottom: 20px;
+  width: 70px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  margin-bottom: 20px;
 }
 
 .footer-brand p {
-    max-width: 250px;
-    line-height: 1.7;
-    color: black;
+  max-width: 250px;
+  line-height: 1.7;
+  color: black;
 }
 
 /* Columnas */
 
 .footer-col {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-col h3 {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    color: black;
-    letter-spacing: 1px;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: black;
+  letter-spacing: 1px;
 }
 
 .footer-col a {
-    text-decoration: none;
-    color: black;
-    margin-bottom: 20px;
-    transition: 0.3s;
-    font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  font-size: 1.1rem;
 }
 
 .footer-col a:hover {
-    color: black;
-    transform: translateX(5px);
+  color: black;
+  transform: translateX(5px);
 }
 
 /* Newsletter */
 
 .newsletter {
-    display: flex;
-    margin-top: 15px;
+  display: flex;
+  margin-top: 15px;
 }
 
 .newsletter input {
-    flex: 1;
-    border: 1px solid rgba(255,255,255,0.2);
-    background: rgba(255,255,255,0.08);
-    padding: 12px 15px;
-    color: black;
-    border-radius: 8px 0 0 8px;
-    outline: none;
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 15px;
+  color: black;
+  border-radius: 8px 0 0 8px;
+  outline: none;
 }
 
 .newsletter input::placeholder {
-    color: black;
+  color: black;
 }
 .newsletter button {
-    width: 60px;
-    border: none;
-    background: rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.15);
-    font-size: 1.3rem;
-    cursor: pointer;
-    border-radius: 0 8px 8px 0;
-    transition: 0.3s;
+  width: 60px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  transition: 0.3s;
 }
 
 .newsletter button:hover {
-    background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* Footer inferior */
 
 .footer-bottom {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    color: rgba(3, 3, 12, 0.75);
-    font-size: 0.9rem;
+  color: rgba(3, 3, 12, 0.75);
+  font-size: 0.9rem;
 }
 
 /* Responsive */
 
 @media (max-width: 1000px) {
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-    }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+  .footer-brand p {
+    max-width: 100%;
+  }
 
-    .footer-brand p {
-        max-width: 100%;
-    }
+  .sociales {
+    justify-content: center;
+  }
 
-    .sociales {
-        justify-content: center;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }
 .rv-logo-img {
-    width: 250px;
-    height: auto;
+  width: 250px;
+  height: auto;
 }
-
 
 .rv-title-center.scrolled .rv-logo-img {
   height: 100px;

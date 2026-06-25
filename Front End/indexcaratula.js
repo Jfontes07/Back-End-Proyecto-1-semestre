@@ -19,11 +19,10 @@ function renderArticulos(articulos) {
   // Ordenar del más reciente al más antiguo (mayor id primero)
   const ordenados = [...articulos].sort((a, b) => b.id - a.id);
 
-  const destacados = ordenados.slice(0, 3);
-  const resto = ordenados.slice(3);
-
-  pintarSeccion(".articulos-verticales", destacados);
-  pintarSeccion(".articulos-horizontales", resto);
+  // Ya no se separa en destacados/resto: todo va a una sola grilla.
+  // El destacado de arriba (cuando el total da resto 1 al dividir por 4)
+  // se resuelve solo con CSS, según el orden en que se insertan los <article>.
+  pintarSeccion(".articulos-horizontales", ordenados);
 }
 
 function pintarSeccion(selector, lista) {
@@ -78,12 +77,10 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
 const PLAYLIST = [
-
   { src: "musica/santamarta.mp3", titulo: "Santa Marta . Larbanois Carrero" },
   { src: "musica/Catalina.mp3", titulo: "Montevideo - La Catalina" },
-  { src: "musica/rada.mp3",     titulo: "Mi País - Rada" },
+  { src: "musica/rada.mp3", titulo: "Mi País - Rada" },
   { src: "musica/un_solo_color.mp3", titulo: "Cielo de un solo color - NTVG" },
   { src: "musica/Zitarrosa.mp3", titulo: "Pa´l que se va - Alfredo Zitarrosa" },
 ];
@@ -98,14 +95,14 @@ function mezclar(arr) {
 }
 
 (function iniciarReproductor() {
-  const audio    = document.getElementById("rv-audio");
-  const btnPlay  = document.getElementById("rv-play");
-  const btnPrev  = document.getElementById("rv-prev");
-  const btnNext  = document.getElementById("rv-next");
+  const audio = document.getElementById("rv-audio");
+  const btnPlay = document.getElementById("rv-play");
+  const btnPrev = document.getElementById("rv-prev");
+  const btnNext = document.getElementById("rv-next");
   const songName = document.getElementById("rv-song-name");
 
   let playlist = mezclar(PLAYLIST);
-  let indice   = 0;
+  let indice = 0;
   let iniciado = false;
 
   function cargarCancion(idx) {
@@ -138,12 +135,21 @@ function mezclar(arr) {
   audio.addEventListener("ended", siguiente);
 
   btnPlay.addEventListener("click", () => {
-    if (!iniciado) { cargarCancion(indice); iniciado = true; }
+    if (!iniciado) {
+      cargarCancion(indice);
+      iniciado = true;
+    }
     audio.paused ? reproducir() : pausar();
   });
 
-  btnNext.addEventListener("click", () => { iniciado = true; siguiente(); });
-  btnPrev.addEventListener("click", () => { iniciado = true; anterior(); });
+  btnNext.addEventListener("click", () => {
+    iniciado = true;
+    siguiente();
+  });
+  btnPrev.addEventListener("click", () => {
+    iniciado = true;
+    anterior();
+  });
 
   document.addEventListener("click", function arrancar() {
     if (!iniciado) {
