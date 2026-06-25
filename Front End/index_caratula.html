@@ -37,12 +37,16 @@
         </div>
       </div>
 
-      <div class="rv-nav-item">
-        <span class="rv-nav-label">Música</span>
-        <audio autoplay loop controls class="rv-audio">
-          <source src="musica/rada.mp3" type="audio/mpeg" />
-        </audio>
-      </div>
+      <div class="rv-nav-item rv-nav-musica">
+  <span class="rv-nav-label">Música</span>
+  <div class="rv-player">
+    <button class="rv-player-btn" id="rv-prev">⏮</button>
+    <button class="rv-player-btn rv-play-pause" id="rv-play">▶</button>
+    <button class="rv-player-btn" id="rv-next">⏭</button>
+    <span class="rv-song-name" id="rv-song-name">♪ Cargando...</span>
+  </div>
+  <audio id="rv-audio"></audio>
+</div>
 
        <div class="rv-nav-item">
         <span class="rv-nav-label">Clima</span>

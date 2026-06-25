@@ -588,9 +588,54 @@ h1 {
   vertical-align: middle;
 }
 
-.rv-audio {
-  width: 160px;
-  height: 28px;
+.rv-player {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rv-player-btn {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, transform 0.1s ease;
+  color: #1a1a1a;
+}
+
+.rv-player-btn:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: scale(1.1);
+}
+
+.rv-play-pause {
+  font-size: 13px;
+  width: 30px;
+  height: 30px;
+  background: rgba(14, 14, 15, 0.85);
+  color: #fff;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.rv-play-pause:hover {
+  background: rgba(14, 14, 15, 1);
+  color: #fff;
+}
+
+.rv-song-name {
+  font-size: 10px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90px;
+  font-style: italic;
 }
 
 .rv-nav-search {

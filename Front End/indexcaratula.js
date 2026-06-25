@@ -77,3 +77,82 @@ window.addEventListener("scroll", () => {
     titulo.classList.remove("scrolled");
   }
 });
+
+
+const PLAYLIST = [
+
+  { src: "musica/santamarta.mp3", titulo: "Santa Marta . Larbanois Carrero" },
+  { src: "musica/Catalina.mp3", titulo: "Montevideo - La Catalina" },
+  { src: "musica/rada.mp3",     titulo: "Mi País - Rada" },
+  { src: "musica/un_solo_color.mp3", titulo: "Cielo de un solo color - NTVG" },
+  { src: "musica/Zitarrosa.mp3", titulo: "Pa´l que se va - Alfredo Zitarrosa" },
+];
+
+function mezclar(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+(function iniciarReproductor() {
+  const audio    = document.getElementById("rv-audio");
+  const btnPlay  = document.getElementById("rv-play");
+  const btnPrev  = document.getElementById("rv-prev");
+  const btnNext  = document.getElementById("rv-next");
+  const songName = document.getElementById("rv-song-name");
+
+  let playlist = mezclar(PLAYLIST);
+  let indice   = 0;
+  let iniciado = false;
+
+  function cargarCancion(idx) {
+    audio.src = playlist[idx].src;
+    songName.textContent = "♪ " + playlist[idx].titulo;
+  }
+
+  function reproducir() {
+    audio.play().catch(() => {});
+    btnPlay.textContent = "⏸";
+  }
+
+  function pausar() {
+    audio.pause();
+    btnPlay.textContent = "▶";
+  }
+
+  function siguiente() {
+    indice = (indice + 1) % playlist.length;
+    cargarCancion(indice);
+    reproducir();
+  }
+
+  function anterior() {
+    indice = (indice - 1 + playlist.length) % playlist.length;
+    cargarCancion(indice);
+    reproducir();
+  }
+
+  audio.addEventListener("ended", siguiente);
+
+  btnPlay.addEventListener("click", () => {
+    if (!iniciado) { cargarCancion(indice); iniciado = true; }
+    audio.paused ? reproducir() : pausar();
+  });
+
+  btnNext.addEventListener("click", () => { iniciado = true; siguiente(); });
+  btnPrev.addEventListener("click", () => { iniciado = true; anterior(); });
+
+  document.addEventListener("click", function arrancar() {
+    if (!iniciado) {
+      cargarCancion(indice);
+      iniciado = true;
+      reproducir();
+      document.removeEventListener("click", arrancar);
+    }
+  });
+
+  cargarCancion(indice);
+})();
