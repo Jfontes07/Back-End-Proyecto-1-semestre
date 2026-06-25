@@ -29,12 +29,20 @@
         <img src="https://visitor-badge.laobi.icu/badge?page_id=escencia-uruguaya&left_color=7bafd4&right_color=4a90d9&left_text=visitas" class="rv-badge" />
       </div>
     </div>
-    <div class="rv-nav-item">
-      <span class="rv-nav-label">Música</span>
-      <audio autoplay loop controls class="rv-audio">
-        <source src="musica/rada.mp3" type="audio/mpeg" />
-      </audio>
-    </div>
+
+
+    <div class="rv-nav-item rv-nav-musica">
+  <span class="rv-nav-label">Música</span>
+  <div class="rv-player">
+    <button class="rv-player-btn" id="rv-prev">⏮</button>
+    <button class="rv-player-btn rv-play-pause" id="rv-play">▶</button>
+    <button class="rv-player-btn" id="rv-next">⏭</button>
+    <span class="rv-song-name" id="rv-song-name">♪ Cargando...</span>
+  </div>
+  <audio id="rv-audio"></audio>
+</div>
+
+
     <div class="rv-nav-item">
       <span class="rv-nav-label">Clima</span>
       <div class="rv-clima">
@@ -163,5 +171,85 @@
     }
   });
 </script>
+
+<script>
+const PLAYLIST = [
+  { src: "musica/santamarta.mp3", titulo: "Santa Marta · Larbanois Carrero" },
+  { src: "musica/Catalina.mp3",   titulo: "Montevideo · La Catalina" },
+  { src: "musica/rada.mp3",       titulo: "Mi País · Rada" },
+  { src: "musica/un_solo_color.mp3", titulo: "Cielo de un solo color · NTVG" },
+  { src: "musica/Zitarrosa.mp3",  titulo: "Pa´l que se va · Zitarrosa" },
+];
+
+function mezclar(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+(function iniciarReproductor() {
+  const audio    = document.getElementById("rv-audio");
+  const btnPlay  = document.getElementById("rv-play");
+  const btnPrev  = document.getElementById("rv-prev");
+  const btnNext  = document.getElementById("rv-next");
+  const songName = document.getElementById("rv-song-name");
+
+  let playlist = mezclar(PLAYLIST);
+  let indice   = 0;
+  let iniciado = false;
+
+  function cargarCancion(idx) {
+    audio.src = playlist[idx].src;
+    songName.textContent = "♪ " + playlist[idx].titulo;
+  }
+
+  function reproducir() {
+    audio.play().catch(() => {});
+    btnPlay.textContent = "⏸";
+  }
+
+  function pausar() {
+    audio.pause();
+    btnPlay.textContent = "▶";
+  }
+
+  function siguiente() {
+    indice = (indice + 1) % playlist.length;
+    cargarCancion(indice);
+    reproducir();
+  }
+
+  function anterior() {
+    indice = (indice - 1 + playlist.length) % playlist.length;
+    cargarCancion(indice);
+    reproducir();
+  }
+
+  audio.addEventListener("ended", siguiente);
+
+  btnPlay.addEventListener("click", () => {
+    if (!iniciado) { cargarCancion(indice); iniciado = true; }
+    audio.paused ? reproducir() : pausar();
+  });
+
+  btnNext.addEventListener("click", () => { iniciado = true; siguiente(); });
+  btnPrev.addEventListener("click", () => { iniciado = true; anterior(); });
+
+  document.addEventListener("click", function arrancar() {
+    if (!iniciado) {
+      cargarCancion(indice);
+      iniciado = true;
+      reproducir();
+      document.removeEventListener("click", arrancar);
+    }
+  });
+
+  cargarCancion(indice);
+})();
+</script>
+
   </body>
 </html>
