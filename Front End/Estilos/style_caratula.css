@@ -533,8 +533,8 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  padding: 4px 14px;
-  height: 60px;
+  padding: 4px 28px;
+  height: 75px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(8px);
@@ -557,20 +557,19 @@ h1 {
 
 /* ── Label superior de cada box ─────────────────── */
 .rv-nav-label {
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(80, 110, 160, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   white-space: nowrap;
 }
 
 /* ── Contenido de cada box ──────────────────────── */
 .rv-date {
-  font-size: 12px;
+  font-size: 15px;
   color: #222;
   white-space: nowrap;
-  font-weight: bold;
   font-family: "Barlow", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -584,7 +583,7 @@ h1 {
 }
 
 .rv-badge {
-  height: 20px;
+  height: 30px;
   vertical-align: middle;
 }
 
@@ -629,12 +628,12 @@ h1 {
 }
 
 .rv-song-name {
-  font-size: 10px;
-  color: #333;
+  font-size: 15px;
+  color: #000000;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 90px;
+  max-width: 150px;
   font-style: italic;
 }
 
@@ -670,7 +669,7 @@ h1 {
 .rv-edition {
   font-size: 12px;
   color: #222;
-}
+} 
 
 .rv-clima {
   display: flex;
@@ -687,13 +686,13 @@ h1 {
 }
 
 .rv-loc {
-  font-size: 10px;
-  color: #555;
+  font-size: 15px;
+  color: #000000;
 }
 
 .rv-cond {
   font-size: 10px;
-  color: #777;
+  color: #000000;
 }
 
 /* ── Línea separadora final ─────────────────────── */
@@ -813,6 +812,7 @@ h1 {
   color: white;
   padding: 0.4rem 1rem;
   border-radius: 6px;
+  height: 30px;
   text-decoration: none;
   font-weight: bold;
   font-size: 0.85rem;
