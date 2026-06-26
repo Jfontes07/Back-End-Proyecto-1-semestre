@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esencia Uruguaya</title>
+    <link rel="stylesheet" href="/Front End/Estilos/style_articulo.css" />
+    <link rel="stylesheet" href="/Front End/Estilos/style_caratula.css" />
+  </head>
+
+  <body>
+    <div id="inicio"></div>
+
+    <div class="rv-title-center">
+      <img
+        src="/Front End/Fotos/esenciauruguaya-animado.gif"
+        alt="Esencia Uruguaya"
+        class="rv-logo-img"
+      />
+      <div class="rv-subtitle">edición digital · montevideo</div>
+    </div>
+
+    <header class="rv-header">
+      <nav class="rv-nav">
+        <div class="rv-nav-item">
+          <span class="rv-nav-label">Fecha</span>
+          <span class="rv-date" id="rv-fecha"></span>
+        </div>
+        <div class="rv-nav-item">
+          <span class="rv-nav-label">Visitas</span>
+          <div class="rv-visitas">
+            👀
+            <img
+              src="https://visitor-badge.laobi.icu/badge?page_id=escencia-uruguaya&left_color=7bafd4&right_color=4a90d9&left_text=Visitas"
+              class="rv-badge"
+            />
+          </div>
+        </div>
+
+        <div class="rv-nav-item rv-nav-musica">
+          <span class="rv-nav-label">Música</span>
+          <div class="rv-player">
+            <button class="rv-player-btn" id="rv-prev">⏮</button>
+            <button class="rv-player-btn rv-play-pause" id="rv-play">▶</button>
+            <button class="rv-player-btn" id="rv-next">⏭</button>
+            <span class="rv-song-name" id="rv-song-name">♪ Cargando...</span>
+          </div>
+          <audio id="rv-audio"></audio>
+        </div>
+
+        <div class="rv-nav-item">
+          <span class="rv-nav-label">Clima</span>
+          <div class="rv-clima">
+            <span class="rv-temp" id="rv-temp">--°C</span>
+            <span class="rv-loc">📍 Montevideo</span>
+            <span class="rv-cond" id="rv-cond"></span>
+          </div>
+        </div>
+        <div class="rv-nav-item rv-nav-redaccion">
+          <span class="rv-nav-label">Redacción</span>
+          <a href="form/index.html" class="btn-crear">Nuevo artículo</a>
+        </div>
+      </nav>
+      <div class="rv-line"></div>
+    </header>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="contenedor">
+      <main>
+        <header class="header-articulo">
+          <div>
+            <h1 id="tituloPrincipal">Origin of the Gaucho tradition</h1>
+          </div>
+        </header>
+
+        <img id="Imagen1" src="/Front End/Fotos/gaucho.jpeg" alt="fotos" />
+
+        <div>
+          <p id="contenido">
+            There´s a figure that goes through Uruguayan history as the gallop
+            of a horse across the field: the Gaucho. Symbol of liberty, work and
+            rootedness to the land, it´s not just a character of the past, but
+            an identity that keeps beating in the Uruguayan´s culture heart.
+            Origins in the Pampa The Gaucho emerged in the 17th and 18th
+            centuries in the plains of Rio de la Plata. He was a mixed race man
+            – son of the encounter between Spanish people, creoles, indigenous
+            and africans – that found his lifestyle in the countryside. Riding
+            horses with his gaucho´s knife in his belt and his poncho as his
+            shield against the wind, he was free, nomad and skilled: he was able
+            to break in horses, drive cattle and even knew every inch of the
+            land as the palm of his hand. During the wars of independence, the
+            gauchos took a protagonist role under the leadership of José
+            Artigas, they formed armies that fought with a fierce and agility
+            that surprised regular military armies. Artigas embodied the values
+            of the Gaucho, loyalty to the land, a distrust of centralized power
+            and the love for freedom. Living Tradition Far from staying in the
+            books, gaucho culture maintains a proud presence in Uruguay. Horse
+            riding, rodeos and payadas – improvised poetic duels accompanied by
+            guitar – continue to be celebrated as authentic expressions of the
+            creole culture. Traditional clothing also survives: gaucho pants,
+            espadrilles and mate are part of the daily landscape of departments
+            like Tacuarembó, Salto and Rivera. The Creole Week: the great
+            gathering Every year during tourism week, Montevideo transforms with
+            the arrival of the Creole Week. Held in Prado Rural Park it´s one of
+            the most popular cultural events of the country and the most
+            important showcase of gaucho traditions. For several days, riders
+            from all over Uruguay and neighboring countries compete in horse
+            breaking and rodeos, demonstrating skill and bravery on unbroken
+            horses. There are also horse herds parades, traditional crafts
+            exhibitions, live music and traditional food tasting stands. The
+            event attracts tens of thousands of visitors, both Uruguayans as
+            foreign tourists and is broadcast nationwide. More than just a show,
+            Creole Week is a reunion with the country´s roots, the countryside
+            and with a way of understanding life that withstands the test of
+            time. Identity in movement The Uruguayan gaucho is not a relic. He´s
+            a symbol in constant dialogue with the present, adapted but faithful
+            to his roots. In a world that changes too fast, creole culture
+            offers something valuable: sense of belonging, community and respect
+            for the land. Perhaps that´s why he keeps galloping, unhurried and
+            unstoppable.
+          </p>
+        </div>
+
+        <img
+          id="Imagen2"
+          src="/Front End/Fotos/Gaucho2.jpeg"
+          alt="Imagen del artículo"
+        />
+
+        <h5 id="autor">Laura DiPascua</h5>
+
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-brand">
+              <img
+                src="Fotos/esenciauruguaya-animado.gif"
+                alt="Esencia Uruguaya"
+                class="rv-logo-img"
+              />
+              <div class="rv-subtitle">edición digital · montevideo</div>
+            </div>
+
+            <div class="footer-col">
+              <a href="index_caratula.html" class="inicio">Volver al inicio</a>
+
+              <a href="contacto.html" class="btn-contacto">Contacto</a>
+            </div>
+
+            <div class="footer-col">
+              <a href="privacidad.html" class="btn-privacidad">
+                Políticas de Privacidad
+              </a>
+              <a href="terminos.html" class="btn-terminos">
+                Términos y condiciones
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h3>✉ NEWSLETTER</h3>
+
+              <p>
+                Recibí las últimas noticias y artículos directamente en tu
+                correo.
+              </p>
+
+              <form class="newsletter">
+                <input type="email" placeholder="Tu correo electrónico" />
+                <button type="submit">→</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© 2026 Esencia Uruguaya. Todos los derechos reservados.</p>
+            <span>Montevideo, Uruguay ♡</span>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="/BackEnd/api-clima/app.js"></script>
+    <script>
+      const fecha = new Date();
+      document.getElementById("rv-fecha").textContent =
+        fecha.toLocaleDateString("es-UY", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+    </script>
+    <script>
+      const titleCenter = document.querySelector(".rv-title-center");
+      const header = document.querySelector(".rv-header");
+
+      let ticking = false;
+      const umbralOn = 80;
+      const umbralOff = 40;
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const y = window.scrollY;
+            if (y > umbralOn) {
+              titleCenter.classList.add("scrolled");
+              header.classList.add("scrolled");
+            } else if (y < umbralOff) {
+              titleCenter.classList.remove("scrolled");
+              header.classList.remove("scrolled");
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    </script>
+
+    <script>
+      const PLAYLIST = [
+        {
+          src: "musica/santamarta.mp3",
+          titulo: "Santa Marta · Larbanois Carrero",
+        },
+        { src: "musica/Catalina.mp3", titulo: "Montevideo · La Catalina" },
+        { src: "musica/rada.mp3", titulo: "Mi País · Rada" },
+        {
+          src: "musica/un_solo_color.mp3",
+          titulo: "Cielo de un solo color · NTVG",
+        },
+        { src: "musica/Zitarrosa.mp3", titulo: "Pa´l que se va · Zitarrosa" },
+      ];
+
+      function mezclar(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
+
+      (function iniciarReproductor() {
+        const audio = document.getElementById("rv-audio");
+        const btnPlay = document.getElementById("rv-play");
+        const btnPrev = document.getElementById("rv-prev");
+        const btnNext = document.getElementById("rv-next");
+        const songName = document.getElementById("rv-song-name");
+
+        let playlist = mezclar(PLAYLIST);
+        let indice = 0;
+        let iniciado = false;
+
+        function cargarCancion(idx) {
+          audio.src = playlist[idx].src;
+          songName.textContent = "♪ " + playlist[idx].titulo;
+        }
+
+        function reproducir() {
+          audio.play().catch(() => {});
+          btnPlay.textContent = "⏸";
+        }
+
+        function pausar() {
+          audio.pause();
+          btnPlay.textContent = "▶";
+        }
+
+        function siguiente() {
+          indice = (indice + 1) % playlist.length;
+          cargarCancion(indice);
+          reproducir();
+        }
+
+        function anterior() {
+          indice = (indice - 1 + playlist.length) % playlist.length;
+          cargarCancion(indice);
+          reproducir();
+        }
+
+        audio.addEventListener("ended", siguiente);
+
+        btnPlay.addEventListener("click", () => {
+          if (!iniciado) {
+            cargarCancion(indice);
+            iniciado = true;
+          }
+          audio.paused ? reproducir() : pausar();
+        });
+
+        btnNext.addEventListener("click", () => {
+          iniciado = true;
+          siguiente();
+        });
+        btnPrev.addEventListener("click", () => {
+          iniciado = true;
+          anterior();
+        });
+
+        document.addEventListener("click", function arrancar() {
+          if (!iniciado) {
+            cargarCancion(indice);
+            iniciado = true;
+            reproducir();
+            document.removeEventListener("click", arrancar);
+          }
+        });
+
+        cargarCancion(indice);
+      })();
+    </script>
+  </body>
+</html>

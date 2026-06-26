@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esencia Uruguaya</title>
+    <link rel="stylesheet" href="/Front End/Estilos/style_articulo.css" />
+    <link rel="stylesheet" href="/Front End/Estilos/style_caratula.css" />
+  </head>
+
+  <body>
+    <div id="inicio"></div>
+
+    <div class="rv-title-center">
+      <img
+        src="/Front End/Fotos/esenciauruguaya-animado.gif"
+        alt="Esencia Uruguaya"
+        class="rv-logo-img"
+      />
+      <div class="rv-subtitle">edición digital · montevideo</div>
+    </div>
+
+    <header class="rv-header">
+      <nav class="rv-nav">
+        <div class="rv-nav-item">
+          <span class="rv-nav-label">Fecha</span>
+          <span class="rv-date" id="rv-fecha"></span>
+        </div>
+        <div class="rv-nav-item">
+          <span class="rv-nav-label">Visitas</span>
+          <div class="rv-visitas">
+            👀
+            <img
+              src="https://visitor-badge.laobi.icu/badge?page_id=escencia-uruguaya&left_color=7bafd4&right_color=4a90d9&left_text=Visitas"
+              class="rv-badge"
+            />
+          </div>
+        </div>
+
+        <div class="rv-nav-item rv-nav-musica">
+          <span class="rv-nav-label">Música</span>
+          <div class="rv-player">
+            <button class="rv-player-btn" id="rv-prev">⏮</button>
+            <button class="rv-player-btn rv-play-pause" id="rv-play">▶</button>
+            <button class="rv-player-btn" id="rv-next">⏭</button>
+            <span class="rv-song-name" id="rv-song-name">♪ Cargando...</span>
+          </div>
+          <audio id="rv-audio"></audio>
+        </div>
+
+        <div class="rv-nav-item">
+          <span class="rv-nav-label">Clima</span>
+          <div class="rv-clima">
+            <span class="rv-temp" id="rv-temp">--°C</span>
+            <span class="rv-loc">📍 Montevideo</span>
+            <span class="rv-cond" id="rv-cond"></span>
+          </div>
+        </div>
+        <div class="rv-nav-item rv-nav-redaccion">
+          <span class="rv-nav-label">Redacción</span>
+          <a href="form/index.html" class="btn-crear">Nuevo artículo</a>
+        </div>
+      </nav>
+      <div class="rv-line"></div>
+    </header>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="contenedor">
+      <main>
+        <header class="header-articulo">
+          <div>
+            <h1 id="tituloPrincipal">
+              Montevideo’s Rambla: The Soul of a City
+            </h1>
+          </div>
+        </header>
+
+        <img
+          id="Imagen1"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG5ZPhzbLGZ2CfpWtc9TCr-4_XQwcMH8qdNC1SLiCMhQ&s=10"
+          alt="Imagen del artículo"
+        />
+
+        <div>
+          <p id="contenido">
+            Few places in Uruguay carry as much everyday weight as Montevideo’s
+            Rambla. Stretching over 22 kilometers along the Río de la Plata,
+            this coastal avenue winds through neighborhood after neighborhood,
+            tying together the city in a way that no other public space quite
+            manages. It is, at once, a road, a park, a meeting point, and
+            something harder to name—a kind of shared habit that Montevideans
+            carry with them. Its construction belongs to an era of ambitious
+            urban reform. In the early decades of the twentieth century,
+            Montevideo was growing fast, and city authorities were looking to
+            modernize: better infrastructure, cleaner traffic flow, a more
+            organized coastline. The idea was not just functional. There was
+            also a clear desire to make the city look the part—to give the
+            waterfront a sense of order and grandeur it had previously lacked.
+            The most significant section, the Rambla Sur, was designed by
+            engineer Juan Pedro Fabini. Building it required substantial
+            earthwork—filling in sections of the coast and reshaping the
+            shoreline. The official opening came in 1935, though improvements
+            and extensions continued for years afterward. What resulted was a
+            new relationship between the city and its river, one that had not
+            existed before in any meaningful form. Walk along it on any given
+            day and the variety is striking. Joggers pass elderly couples out
+            for a stroll. Cyclists weave around kids on scooters. Fishermen lean
+            against the railings, lines cast into murky water, while a few
+            meters away a group of friends sit on a bench sharing a thermos of
+            mate—watching the river, talking about nothing in particular. The
+            Rambla does not demand that you do anything specific. That openness
+            is part of what makes it work. For visitors, it serves as one of the
+            city’s most rewarding introductions. The route passes beaches,
+            parks, historical monuments, and scenic lookout points. The sunsets
+            are particularly well-known—the sky over the Río de la Plata takes
+            on colors that photographers have been chasing for generations, all
+            of it reflected back off the wide, slow surface of the water. Moving
+            along the coastline also means moving through the city’s different
+            characters: quieter residential stretches give way to livelier
+            commercial areas, each with its own rhythm. The Rambla also carries
+            some curious footnotes. Certain granite pillars along its length
+            have unexplained holes drilled into them—historical research
+            suggests they were meant to hold bronze decorative elements that
+            were never actually installed. Whether budget, politics, or some
+            other factor intervened is unclear. The holes remain, a small puzzle
+            embedded in the stonework. More striking is what lies beneath the
+            Rambla Sur itself. Before the landfill operations, this stretch of
+            coast had actual beaches—Santa Ana and Patricios among them. They
+            disappeared under the construction and have not been seen since,
+            except in old photographs and the occasional archive. The city grew
+            over them without ceremony, the way cities tend to do. That loss is
+            worth sitting with. The Rambla improved daily life for the city’s
+            residents in real, measurable ways. But it also permanently altered
+            the natural coastline, and what was sacrificed in the process cannot
+            be recovered. Urban development rarely comes without those
+            trade-offs, and Montevideo’s experience is not unusual—it is just
+            more visible than most, given how central the Rambla has become to
+            the city’s identity. There is a broader question lurking here about
+            how societies relate to the landscapes they inherit. Humans have
+            always reshaped their environments—that’s not new. But the Rambla is
+            a useful case study because the reshaping was so thorough, and the
+            result so embraced. Something built with fairly utilitarian
+            goals—traffic management, coastal protection, civic
+            beautification—ended up becoming emotionally significant in ways
+            that no blueprint could have anticipated. Today, its most important
+            feature might simply be that it belongs to everyone. No admission,
+            no restrictions—just open space along the water, accessible to
+            whoever wants it. In a country that takes some pride in its
+            egalitarian social traditions, the Rambla fits that story. People
+            from very different circumstances share the same strip of coastline,
+            and that daily coexistence, even if unremarkable in the moment, adds
+            up to something. The Rambla de Montevideo started as an
+            infrastructure project and became a way of life. Its history holds
+            both the ambitions of a modernizing city and the costs that came
+            with them. What it is now—a long, open, well-worn stretch of coast
+            that people return to again and again—was not planned exactly, but
+            it is real, and it matters. That is probably the most honest thing
+            that can be said about it.
+          </p>
+        </div>
+
+        <img id="Imagen2" src="" alt="Imagen del artículo" />
+
+        <h5 id="autor">Fiorella Montserrat Balderrin Barrios</h5>
+
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-brand">
+              <img
+                src="Fotos/esenciauruguaya-animado.gif"
+                alt="Esencia Uruguaya"
+                class="rv-logo-img"
+              />
+              <div class="rv-subtitle">edición digital · montevideo</div>
+            </div>
+
+            <div class="footer-col">
+              <a href="index_caratula.html" class="inicio">Volver al inicio</a>
+
+              <a href="contacto.html" class="btn-contacto">Contacto</a>
+            </div>
+
+            <div class="footer-col">
+              <a href="privacidad.html" class="btn-privacidad">
+                Políticas de Privacidad
+              </a>
+              <a href="terminos.html" class="btn-terminos">
+                Términos y condiciones
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h3>✉ NEWSLETTER</h3>
+
+              <p>
+                Recibí las últimas noticias y artículos directamente en tu
+                correo.
+              </p>
+
+              <form class="newsletter">
+                <input type="email" placeholder="Tu correo electrónico" />
+                <button type="submit">→</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© 2026 Esencia Uruguaya. Todos los derechos reservados.</p>
+            <span>Montevideo, Uruguay ♡</span>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="/BackEnd/api-clima/app.js"></script>
+    <script>
+      const fecha = new Date();
+      document.getElementById("rv-fecha").textContent =
+        fecha.toLocaleDateString("es-UY", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+    </script>
+    <script>
+      const titleCenter = document.querySelector(".rv-title-center");
+      const header = document.querySelector(".rv-header");
+
+      let ticking = false;
+      const umbralOn = 80;
+      const umbralOff = 40;
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const y = window.scrollY;
+            if (y > umbralOn) {
+              titleCenter.classList.add("scrolled");
+              header.classList.add("scrolled");
+            } else if (y < umbralOff) {
+              titleCenter.classList.remove("scrolled");
+              header.classList.remove("scrolled");
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    </script>
+
+    <script>
+      const PLAYLIST = [
+        {
+          src: "musica/santamarta.mp3",
+          titulo: "Santa Marta · Larbanois Carrero",
+        },
+        { src: "musica/Catalina.mp3", titulo: "Montevideo · La Catalina" },
+        { src: "musica/rada.mp3", titulo: "Mi País · Rada" },
+        {
+          src: "musica/un_solo_color.mp3",
+          titulo: "Cielo de un solo color · NTVG",
+        },
+        { src: "musica/Zitarrosa.mp3", titulo: "Pa´l que se va · Zitarrosa" },
+      ];
+
+      function mezclar(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
+
+      (function iniciarReproductor() {
+        const audio = document.getElementById("rv-audio");
+        const btnPlay = document.getElementById("rv-play");
+        const btnPrev = document.getElementById("rv-prev");
+        const btnNext = document.getElementById("rv-next");
+        const songName = document.getElementById("rv-song-name");
+
+        let playlist = mezclar(PLAYLIST);
+        let indice = 0;
+        let iniciado = false;
+
+        function cargarCancion(idx) {
+          audio.src = playlist[idx].src;
+          songName.textContent = "♪ " + playlist[idx].titulo;
+        }
+
+        function reproducir() {
+          audio.play().catch(() => {});
+          btnPlay.textContent = "⏸";
+        }
+
+        function pausar() {
+          audio.pause();
+          btnPlay.textContent = "▶";
+        }
+
+        function siguiente() {
+          indice = (indice + 1) % playlist.length;
+          cargarCancion(indice);
+          reproducir();
+        }
+
+        function anterior() {
+          indice = (indice - 1 + playlist.length) % playlist.length;
+          cargarCancion(indice);
+          reproducir();
+        }
+
+        audio.addEventListener("ended", siguiente);
+
+        btnPlay.addEventListener("click", () => {
+          if (!iniciado) {
+            cargarCancion(indice);
+            iniciado = true;
+          }
+          audio.paused ? reproducir() : pausar();
+        });
+
+        btnNext.addEventListener("click", () => {
+          iniciado = true;
+          siguiente();
+        });
+        btnPrev.addEventListener("click", () => {
+          iniciado = true;
+          anterior();
+        });
+
+        document.addEventListener("click", function arrancar() {
+          if (!iniciado) {
+            cargarCancion(indice);
+            iniciado = true;
+            reproducir();
+            document.removeEventListener("click", arrancar);
+          }
+        });
+
+        cargarCancion(indice);
+      })();
+    </script>
+  </body>
+</html>
