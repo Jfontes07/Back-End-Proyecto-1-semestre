@@ -139,36 +139,7 @@
 
     <script src="indexarticulo.js"></script>
     <script src="/BackEnd/api-clima/app.js"></script>
-<script>
-  const fecha = new Date();
-  document.getElementById('rv-fecha').textContent =
-    fecha.toLocaleDateString('es-UY', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
-</script>
-<script>
-  const titleCenter = document.querySelector('.rv-title-center');
-  const header = document.querySelector('.rv-header');
 
-  let ticking = false;
-  const umbralOn = 80;
-  const umbralOff = 40;
-
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        const y = window.scrollY;
-        if (y > umbralOn) {
-          titleCenter.classList.add('scrolled');
-          header.classList.add('scrolled');
-        } else if (y < umbralOff) {
-          titleCenter.classList.remove('scrolled');
-          header.classList.remove('scrolled');
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-</script>
 
 <script>
 const PLAYLIST = [
