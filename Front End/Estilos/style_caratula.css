@@ -339,21 +339,7 @@
 .card:hover .card__side--back {
   transform: rotateY(0);
 }
-.card__side--front-1 {
-  z-index: 2;
-}
 
-.card__side--back {
-  z-index: 1;
-}
-
-.card:hover .card__side--front-1 {
-  z-index: 1;
-}
-
-.card:hover .card__side--back {
-  z-index: 2;
-}
 .imagen_art {
   width: 250px;
   height: 200px;
