@@ -37,24 +37,36 @@ body {
 #form-superior h3 {
   width: 400px;
   height: 50px;
-  border: 4px solid #444;
-  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.555);
+  border-radius: 10px;
   text-align: center;
   font-size: 22px;
-  padding: 0 12px;
-  background-color: #fff;
+  line-height: 50px;
+
+  background: rgba(255, 255, 255, 0.438);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  color: #042037;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
 }
 
-/* CONTENEDOR */
+/* CONTENEDOR  */
 
 #contenedor {
   max-width: 900px;
   margin: auto;
-  background: white;
-  border: 4px solid #444;
-  border-radius: 20px;
   padding: 40px;
   position: relative;
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* PERFIL */
@@ -123,12 +135,26 @@ body {
 #campo-fecha label,
 #campo-autor label {
   min-width: 90px;
-  border: 2px solid #666;
-  border-radius: 10px;
   padding: 10px;
   text-align: center;
+
+  background: rgba(255, 255, 255, 0.575);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 2px solid #666;
+  border-radius: 10px;
+
+  color: #0420376e;
+}
+#campo-fecha {
+  cursor: pointer;
 }
 
+#campo-fecha input[type="date"] {
+  cursor: pointer;
+  width: 100%;
+}
 /* CAMPO IMAGENES */
 
 #campo-imagenes {
@@ -165,7 +191,7 @@ body {
   border: 2px solid #666;
   border-radius: 10px;
   font-size: 1rem;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.575);
 }
 
 .contenido {
@@ -176,18 +202,24 @@ body {
   resize: vertical;
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
+background: rgba(255, 255, 255, 0.575);
 }
 
-/* BOTON */
+/* BOTONes */
 
 #campo-publicar {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
 }
+
+
 
 #btn-publicar {
   width: 100%;
   padding: 15px;
-  border: none;
+  border: 2px solid #666;
   background: #6481e0;
   color: white;
   font-size: 1rem;
@@ -199,6 +231,28 @@ body {
 #btn-publicar:hover {
   opacity: 0.9;
 }
+
+#btn-volver {
+  display: block;
+  margin: 20px auto 0;
+  padding: 8px 20px;
+  text-align: center;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.575);
+  border: 2px solid #666;
+  border-radius: 10px;
+  color: #042037;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+#btn-volver:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+
 
 /* MENSAJE */
 
@@ -285,12 +339,13 @@ p {
 }
 /* colores de la web*/
 :root {
-  --color-marca: 07123A;
-  --color-acento: 718EA4;
-  --color-titulos: 042037;
-  --color-texto: 123652;
-  --color-fondo-tarjeta: 496D89;
+  --color-marca: #07123A;
+  --color-acento: #718EA4;
+  --color-titulos: #042037;
+  --color-texto: #123652;
+  --color-fondo-tarjeta: #496D89;
 }
+
 /* de los articulos */
 .tarjeta-articulo {
   background-color: var(--color-fondo-tarjeta);

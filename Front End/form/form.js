@@ -113,3 +113,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+//abre solmente el calendario al clickear en cualquier lado del campo//
+const inputFecha = document.getElementById("fecha");
+
+inputFecha.addEventListener("click", function () {
+  try {
+    this.showPicker();
+  } catch (e) {}
+});
+
+//boton con la opción de ir al inicio//
+// Después del envío exitoso, mostrar botón de volver al inicio
+const btnVolver = document.createElement("a");
+btnVolver.href = "../index_caratula.html"; 
+btnVolver.textContent = "← Volver al inicio";
+btnVolver.id = "btn-volver";
+document.getElementById("contenedor").appendChild(btnVolver);
