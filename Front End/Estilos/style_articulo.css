@@ -172,13 +172,16 @@ footer {
   }
 }
 
-//esto hace que el header o logo nos lleve al inicio//
+
+/* esto hace que el logo o header nos lleve al inicio*/
+
 .rv-home-link {
   display: block;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
 }
+
 /* ==========================
    FOOTER
 ========================== */
