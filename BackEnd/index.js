@@ -36,6 +36,7 @@ function leerArticulos() {
         descripcion: "Descripción breve del artículo.",
         imagen1: "",
         imagen2: "",
+        idioma: "esp",
       },
     ];
     fs.writeFileSync(ARCHIVO_DATOS, JSON.stringify(inicial, null, 2), "utf-8");
@@ -45,11 +46,7 @@ function leerArticulos() {
 }
 
 function guardarArticulos(articulos) {
-  fs.writeFileSync(
-    ARCHIVO_DATOS,
-    JSON.stringify(articulos, null, 2),
-    "utf-8",
-  );
+  fs.writeFileSync(ARCHIVO_DATOS, JSON.stringify(articulos, null, 2), "utf-8");
 }
 
 // ── RUTAS
@@ -82,11 +79,18 @@ app.post("/articulos", (req, res) => {
     descripcion,
     imagen1,
     imagen2,
+    idioma,
   } = req.body;
 
   if (!tituloPrincipal || !autor || !descripcion) {
     return res.status(400).json({
       error: "Los campos título, autor y descripción son obligatorios",
+    });
+  }
+
+  if (idioma !== "esp" && idioma !== "ing") {
+    return res.status(400).json({
+      error: "El campo idioma es obligatorio y debe ser 'esp' o 'ing'",
     });
   }
 
@@ -105,6 +109,7 @@ app.post("/articulos", (req, res) => {
     descripcion,
     imagen1: imagen1 || "",
     imagen2: imagen2 || "",
+    idioma,
   };
 
   articulos.push(nuevo);

@@ -19,10 +19,12 @@ function renderArticulos(articulos) {
   // Ordenar del más reciente al más antiguo (mayor id primero)
   const ordenados = [...articulos].sort((a, b) => b.id - a.id);
 
-  // Ya no se separa en destacados/resto: todo va a una sola grilla.
-  // El destacado de arriba (cuando el total da resto 1 al dividir por 4)
-  // se resuelve solo con CSS, según el orden en que se insertan los <article>.
-  pintarSeccion(".articulos-horizontales", ordenados);
+  // Separar por idioma: lo que no tenga "ing" se trata como español
+  const enEspanol = ordenados.filter((a) => a.idioma !== "ing");
+  const enIngles = ordenados.filter((a) => a.idioma === "ing");
+
+  pintarSeccion("#articulos-esp", enEspanol);
+  pintarSeccion("#articulos-ing", enIngles);
 }
 
 function pintarSeccion(selector, lista) {

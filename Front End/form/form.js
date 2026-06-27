@@ -47,16 +47,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const descripcion = document.getElementById("descripcion").value.trim();
     const imagen1 = inputImagen1.value.trim();
     const imagen2 = inputImagen2.value.trim();
+    const idioma = document.getElementById("idioma").value;
 
-    if (!tituloPrincipal || !descripcion || !autor) {
+    if (!tituloPrincipal || !descripcion || !autor || !idioma) {
       mostrarMensaje(
-        "Completá los campos obligatorios: título, autor y descripción.",
+        "Completá los campos obligatorios: título, autor, descripción e idioma.",
         "red",
       );
       return;
     }
 
-    // Objeto a enviar — ahora incluye las URLs de imagen
+    // Objeto a enviar — ahora incluye las URLs de imagen y el idioma
     const nuevoArticulo = {
       tituloPrincipal,
       subtitulo,
@@ -66,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       descripcion,
       imagen1,
       imagen2,
+      idioma,
     };
 
     try {
