@@ -31,7 +31,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Contenido con saltos de línea respetados
     const contenidoHTML = (datos.contenido || "")
       .split(/\n\n+/)
-      .map(parrafo => `<p>${parrafo.replace(/\n/g, "<br>")}</p>`)
+     .map(parrafo => {
+  if (parrafo.startsWith("##")) return `<h3>${parrafo.slice(2).trim()}</h3>`;
+  return `<p>${parrafo.replace(/\n/g, "<br>").replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")}</p>`;
+})
       .join("");
     document.getElementById("contenido").innerHTML = contenidoHTML;
 
