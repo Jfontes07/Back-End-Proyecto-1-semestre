@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   datos.tituloPrincipal;
 document.getElementById("subtitulo").textContent = datos.subtitulo || "";
 
+
+//Esto hace que el js respete los espacios y saltos de línea del contenido del artículo, y los muestre en el HTML.
 const contenidoHTML = (datos.contenido || "")
   .split(/\n\n+/)           // separa por línea en blanco (como en el formulario)
   .map(parrafo => `<p>${parrafo.replace(/\n/g, "<br>")}</p>`)

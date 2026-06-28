@@ -64,8 +64,8 @@ body {
 /* Imagen izquierda */
 #Imagen1 {
   float: left;
-  width: 420px;
-  height: 260px;
+  width: 550px;
+  height: 350px;
   border: 2px solid #333;
   border-radius: 15px;
   text-decoration: none;
@@ -78,19 +78,14 @@ body {
 
 /* Imagen derecha */
 #Imagen2 {
-  float: right;
-  width: 420px;
-  height: 260px;
+  display: block;
+  width: 550px;
+  height: 300px;
   border: 2px solid #333;
   border-radius: 15px;
-  text-decoration: none;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0 20px 20px;
+  object-fit: cover;
+  margin: 30px auto 20px;
 }
-
 h5,
 footer {
   clear: both;
