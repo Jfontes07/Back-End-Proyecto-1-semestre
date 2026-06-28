@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const id = params.get("id");
 
   if (!id) {
-    document.getElementById("tituloPrincipal").textContent =
-      "No se especificó ningún artículo";
+    document.getElementById("tituloPrincipal").textContent = "No se especificó ningún artículo";
     return;
   }
 
@@ -19,42 +18,53 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     if (!respuesta.ok) {
-      document.getElementById("tituloPrincipal").textContent =
-        "Artículo no encontrado";
+      document.getElementById("tituloPrincipal").textContent = "Artículo no encontrado";
       return;
     }
 
     const datos = await respuesta.json();
 
-    // Pintar los datos en el DOM
-    document.getElementById("tituloPrincipal").textContent =
-  datos.tituloPrincipal;
-document.getElementById("subtitulo").textContent = datos.subtitulo || "";
+    // Título y subtítulo
+    document.getElementById("tituloPrincipal").textContent = datos.tituloPrincipal;
+    document.getElementById("subtitulo").textContent = datos.subtitulo || "";
 
+    // Contenido con saltos de línea respetados
+    const contenidoHTML = (datos.contenido || "")
+      .split(/\n\n+/)
+      .map(parrafo => `<p>${parrafo.replace(/\n/g, "<br>")}</p>`)
+      .join("");
+    document.getElementById("contenido").innerHTML = contenidoHTML;
 
-//Esto hace que el js respete los espacios y saltos de línea del contenido del artículo, y los muestre en el HTML.
-const contenidoHTML = (datos.contenido || "")
-  .split(/\n\n+/)           // separa por línea en blanco (como en el formulario)
-  .map(parrafo => `<p>${parrafo.replace(/\n/g, "<br>")}</p>`)
-  .join("");
-document.getElementById("contenido").innerHTML = contenidoHTML;
+    // Fecha de publicación
+    if (datos.fecha) {
+      const fecha = new Date(datos.fecha + "T00:00:00");
+      document.getElementById("fecha").textContent = "Fecha de publicación: " + fecha.toLocaleDateString("es-UY", {
+        day: "numeric", month: "long", year: "numeric"
+      });
+    }
 
-document.getElementById("autor").textContent = datos.autor
-  ? `Por ${datos.autor}`
-  : "";
+    // Autor
+    document.getElementById("autor").textContent = datos.autor ? `Por ${datos.autor}` : "";
 
-// Mostrar imágenes si existen
-if (datos.imagen1) {
-  document.getElementById("Imagen1").src = datos.imagen1;
-}
-if (datos.imagen2) {
-  document.getElementById("Imagen2").src = datos.imagen2;
-}
+    // Imágenes
+    if (datos.imagen1) {
+      document.getElementById("Imagen1").src = datos.imagen1;
+    }
+    if (datos.imagen2) {
+      document.getElementById("Imagen2").src = datos.imagen2;
+    }
 
+    // Bibliografía
+    if (datos.bibliografia) {
+      document.getElementById("bibliografia").innerHTML =
+        `Fuente: <a href="${datos.bibliografia}" target="_blank">${datos.bibliografia}</a>`;
+    }
+
+    // Título de la pestaña
     document.title = datos.tituloPrincipal + " · Esencia Uruguaya";
+
   } catch (e) {
     console.error(e);
-    document.getElementById("tituloPrincipal").textContent =
-      "Error al cargar el artículo";
+    document.getElementById("tituloPrincipal").textContent = "Error al cargar el artículo";
   }
 });

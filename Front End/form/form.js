@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const imagen1 = inputImagen1.value.trim();
     const imagen2 = inputImagen2.value.trim();
     const idioma = document.getElementById("idioma").value;
+    const bibliografia = document.getElementById("bibliografia").value.trim();
 
     if (!tituloPrincipal || !descripcion || !autor || !idioma) {
       mostrarMensaje(
@@ -58,17 +59,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Objeto a enviar — ahora incluye las URLs de imagen y el idioma
-    const nuevoArticulo = {
-      tituloPrincipal,
-      subtitulo,
-      fecha,
-      autor,
-      contenido,
-      descripcion,
-      imagen1,
-      imagen2,
-      idioma,
-    };
+   const nuevoArticulo = {
+  tituloPrincipal,
+  subtitulo,
+  fecha,
+  autor,
+  contenido,
+  descripcion,
+  imagen1,
+  imagen2,
+  idioma,
+  bibliografia, // ← esta línea nueva con la bibliografía incluida//
+};
 
     try {
       const respuesta = await fetch(`${API_URL}/articulos`, {

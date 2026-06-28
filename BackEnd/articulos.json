@@ -9,7 +9,8 @@
     "descripcion": "Aquí en mi artículo se detalla información sobre la Rambla de Montevideo: su origen, su evolución y la razón por la que hoy es mucho más que un paseo costero, es una tradición que define la identidad del pueblo uruguayo.",
     "imagen1": "https://cdn1.matadornetwork.com/blogs/1/2019/05/Montevideo-sign-in-Uruguays-capital-1200x748.jpg",
     "imagen2": "https://mvdaudiovisual.montevideo.gub.uy/sites/mvdaudiovisual.montevideo.gub.uy/files/locacion/ramblasur-700pxbcmyk-700pxBrgb.jpg",
-    "idioma": "esp"
+    "idioma": "esp",
+    "bibliografia": "https://uruguayaldetalle.blogspot.com/2013/07/construccion-de-la-rabla.html"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "descripcion": "This article is about the Rambla of Montevideo, an important symbol of\nUruguay's  capital city, where I explain its origin and construction as part\nof the city's  modernization process. It also highlights its cultural, social,\nand tourist importance, as well as its role in the identity and daily life of\nMontevideo's residents.",
     "imagen1": "https://i0.wp.com/apuntesyviajes.com/wp-content/uploads/2022/01/pedaleando_por_la_rambla_montevideo.jpg?fit=1200%2C900&ssl=1",
     "imagen2": "https://mvdaudiovisual.montevideo.gub.uy/sites/mvdaudiovisual.montevideo.gub.uy/files/locacion/ramblasur-700pxbcmyk-700pxBrgb.jpg",
-    "idioma": "ing"
+    "idioma": "ing",
+    "bibliografia": "https://uruguayaldetalle.blogspot.com/2013/07/construccion-de-la-rabla.html"
   },
   {
     "id": 3,
