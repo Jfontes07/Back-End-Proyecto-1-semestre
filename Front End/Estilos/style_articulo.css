@@ -127,6 +127,13 @@ h5 {
   transition: padding 0.3s ease;
 }
 
+.rv-header-fixed.scrolled .rv-nav {
+  display: none;
+}
+
+.rv-header-fixed.scrolled .rv-line {
+  display: none;
+}
 .rv-header-fixed.scrolled .rv-title-center {
   padding: 2px 0 2px;
 }
