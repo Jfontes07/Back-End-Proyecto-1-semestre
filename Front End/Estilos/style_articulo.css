@@ -74,6 +74,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: 10px 20px 20px 0;
+  object-fit: cover;
+  animation: float 3s ease-in-out infinite;
 }
 
 /* Imagen derecha */
@@ -85,7 +87,21 @@ body {
   border-radius: 15px;
   object-fit: cover;
   margin: 30px auto 20px;
+  animation: tilt3d 6s ease-in-out infinite;
 }
+
+/* Animaciones */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes tilt3d {
+  0%, 100% { transform: translate(0, 0); }
+  25%       { transform: translate(4px, -3px); }
+  75%       { transform: translate(-4px, 3px); }
+}
+
 h5,
 footer {
   clear: both;
