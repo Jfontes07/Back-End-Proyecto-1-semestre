@@ -16,13 +16,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function renderArticulos(articulos) {
-  // Ordenar del más reciente al más antiguo (mayor id primero)
   const ordenados = [...articulos].sort((a, b) => b.id - a.id);
-
-  // Separar por idioma: lo que no tenga "ing" se trata como español
   const enEspanol = ordenados.filter((a) => a.idioma !== "ing");
-  const enIngles = ordenados.filter((a) => a.idioma === "ing");
-
+  const enIngles  = ordenados.filter((a) => a.idioma === "ing");
   pintarSeccion("#articulos-esp", enEspanol);
   pintarSeccion("#articulos-ing", enIngles);
 }
@@ -68,23 +64,35 @@ function pintarSeccion(selector, lista) {
   });
 }
 
-// Efecto al hacer scroll
+// ── Scroll: sin vibración ─────────────────────────
+// Usamos requestAnimationFrame para no disparar en cada pixel,
+// y un threshold alto (180px) para que el toggle quede lejos
+// del punto donde el contenido sube al encoger el logo.
 const titulo = document.querySelector(".rv-title-center");
+let tickPendiente = false;
+let estaScrolled   = false;
+const UMBRAL = 180; // px — ajustá si querés que cambie antes o después
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    titulo.classList.add("scrolled");
-  } else {
-    titulo.classList.remove("scrolled");
-  }
-});
+  if (tickPendiente) return;
+  tickPendiente = true;
 
+  requestAnimationFrame(() => {
+    tickPendiente = false;
+    const deberiaScrolled = window.scrollY > UMBRAL;
+    if (deberiaScrolled === estaScrolled) return; // nada cambió, no tocar el DOM
+    estaScrolled = deberiaScrolled;
+    titulo.classList.toggle("scrolled", estaScrolled);
+  });
+}, { passive: true });
+
+// ── Reproductor ───────────────────────────────────
 const PLAYLIST = [
-  { src: "musica/santamarta.mp3", titulo: "Santa Marta . Larbanois Carrero" },
-  { src: "musica/Catalina.mp3", titulo: "Montevideo - La Catalina" },
-  { src: "musica/rada.mp3", titulo: "Mi País - Rada" },
-  { src: "musica/un_solo_color.mp3", titulo: "Cielo de un solo color - NTVG" },
-  { src: "musica/Zitarrosa.mp3", titulo: "Pa´l que se va - Alfredo Zitarrosa" },
+  { src: "musica/santamarta.mp3",   titulo: "Santa Marta . Larbanois Carrero" },
+  { src: "musica/Catalina.mp3",     titulo: "Montevideo - La Catalina" },
+  { src: "musica/rada.mp3",         titulo: "Mi País - Rada" },
+  { src: "musica/un_solo_color.mp3",titulo: "Cielo de un solo color - NTVG" },
+  { src: "musica/Zitarrosa.mp3",    titulo: "Pa´l que se va - Alfredo Zitarrosa" },
 ];
 
 function mezclar(arr) {
@@ -97,14 +105,14 @@ function mezclar(arr) {
 }
 
 (function iniciarReproductor() {
-  const audio = document.getElementById("rv-audio");
-  const btnPlay = document.getElementById("rv-play");
-  const btnPrev = document.getElementById("rv-prev");
-  const btnNext = document.getElementById("rv-next");
+  const audio    = document.getElementById("rv-audio");
+  const btnPlay  = document.getElementById("rv-play");
+  const btnPrev  = document.getElementById("rv-prev");
+  const btnNext  = document.getElementById("rv-next");
   const songName = document.getElementById("rv-song-name");
 
   let playlist = mezclar(PLAYLIST);
-  let indice = 0;
+  let indice   = 0;
   let iniciado = false;
 
   function cargarCancion(idx) {
@@ -137,21 +145,12 @@ function mezclar(arr) {
   audio.addEventListener("ended", siguiente);
 
   btnPlay.addEventListener("click", () => {
-    if (!iniciado) {
-      cargarCancion(indice);
-      iniciado = true;
-    }
+    if (!iniciado) { cargarCancion(indice); iniciado = true; }
     audio.paused ? reproducir() : pausar();
   });
 
-  btnNext.addEventListener("click", () => {
-    iniciado = true;
-    siguiente();
-  });
-  btnPrev.addEventListener("click", () => {
-    iniciado = true;
-    anterior();
-  });
+  btnNext.addEventListener("click", () => { iniciado = true; siguiente(); });
+  btnPrev.addEventListener("click", () => { iniciado = true; anterior(); });
 
   document.addEventListener("click", function arrancar() {
     if (!iniciado) {
