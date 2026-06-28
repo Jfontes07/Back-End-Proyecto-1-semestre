@@ -42,13 +42,38 @@ body {
   text-align: center;
   font-size: 22px;
   line-height: 50px;
-
   background: rgba(255, 255, 255, 0.438);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-
   color: #042037;
   box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  position: relative;
+  overflow: hidden;
+  animation: shake 3s ease-in-out infinite;
+}
+
+#form-superior h3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 90%, 100% { transform: translateX(0); }
+  92%           { transform: translateX(-5px); }
+  94%           { transform: translateX(5px); }
+  96%           { transform: translateX(-4px); }
+  98%           { transform: translateX(4px); }
+}
+
+@keyframes shimmer {
+  0%   { left: -100%; }
+  100% { left: 160%; }
 }
 
 /* CONTENEDOR  */
@@ -202,7 +227,7 @@ body {
   resize: vertical;
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
-background: rgba(255, 255, 255, 0.575);
+  background: rgba(255, 255, 255, 0.575);
 }
 
 /* BOTONes */
@@ -214,18 +239,30 @@ background: rgba(255, 255, 255, 0.575);
   gap: 10px;
 }
 
-
-
 #btn-publicar {
   width: 100%;
   padding: 15px;
   border: 2px solid #666;
   background: #6481e0;
   color: white;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
   border-radius: 10px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  animation: shake 3s ease-in-out infinite;
+}
+
+#btn-publicar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 2.5s ease-in-out infinite;
 }
 
 #btn-publicar:hover {
@@ -251,8 +288,6 @@ background: rgba(255, 255, 255, 0.575);
 #btn-volver:hover {
   background: rgba(255, 255, 255, 0.85);
 }
-
-
 
 /* MENSAJE */
 
@@ -372,7 +407,7 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
-/* nevas fuentes*/
+/* nuevas fuentes*/
 @font-face {
   font-family: "RealisticNature";
   src: url("../fonts/Realistic Nature.ttf") format("truetype");
@@ -450,7 +485,6 @@ footer {
 }
 .bg2 {
   animation-direction: alternate-reverse;
-
   animation-duration: 4s;
 }
 .bg3 {
