@@ -46,13 +46,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Autor
     document.getElementById("autor").textContent = datos.autor ? `Por ${datos.autor}` : "";
 
-    // Imágenes
-    if (datos.imagen1) {
-      document.getElementById("Imagen1").src = datos.imagen1;
-    }
-    if (datos.imagen2) {
-      document.getElementById("Imagen2").src = datos.imagen2;
-    }
+    // Imágenes con lightbox
+function abrirLightbox(src) {
+  document.getElementById("overlay-img-src").src = src;
+  document.getElementById("overlay-img").style.display = "flex";
+}
+
+if (datos.imagen1) {
+  document.getElementById("Imagen1").src = datos.imagen1;
+  document.getElementById("Imagen1").style.cursor = "pointer";
+  document.getElementById("Imagen1").onclick = () => abrirLightbox(datos.imagen1);
+}
+if (datos.imagen2) {
+  document.getElementById("Imagen2").src = datos.imagen2;
+  document.getElementById("Imagen2").style.cursor = "pointer";
+  document.getElementById("Imagen2").onclick = () => abrirLightbox(datos.imagen2);
+}
+function abrirLightbox(src) {
+  document.getElementById("overlay-img-src").src = src;
+  const overlay = document.getElementById("overlay-img");
+  overlay.style.display = "flex";
+  overlay.style.justifyContent = "center";
+  overlay.style.alignItems = "center";
+}
 
     // Bibliografía
     if (datos.bibliografia) {
