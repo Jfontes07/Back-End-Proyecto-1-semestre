@@ -30,7 +30,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("tituloPrincipal").textContent =
   datos.tituloPrincipal;
 document.getElementById("subtitulo").textContent = datos.subtitulo || "";
-document.getElementById("contenido").textContent = datos.contenido || "";
+
+const contenidoHTML = (datos.contenido || "")
+  .split(/\n\n+/)           // separa por línea en blanco (como en el formulario)
+  .map(parrafo => `<p>${parrafo.replace(/\n/g, "<br>")}</p>`)
+  .join("");
+document.getElementById("contenido").innerHTML = contenidoHTML;
+
 document.getElementById("autor").textContent = datos.autor
   ? `Por ${datos.autor}`
   : "";
