@@ -35,8 +35,12 @@
     "descripcion": "En mi articulo podremos saber un poquito mas de la cultura criolla, sus raices y origenes.\nUna tradicion que al dia de hoy sigue viva, viviendola por ejemplo año a año en semana criolla, donde se celebra esta cultura de hace ya muchos años.",
     "imagen1": "https://www.tacuaremboturismo.gub.uy/media/2023/12/elgaucho.jpg",
     "imagen2": "https://uruguayeduca.anep.edu.uy/sites/default/files/styles/wide/public/2020-09/Carlos_Morel_-_Payada_en_una_pulper%C3%ADa.jpg?itok=9Cs1R2Ge",
-    "idioma": "esp"
+    "idioma": "esp",
+    "bibliografia": "https://es.wikipedia.org/wiki/Gaucho,https://uruguaynatural.com/es/masqueunpais/el-gaucho-2/,https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/10002/1/TS_FonsecaValentina.pdf,https://es.wikipedia.org/wiki/Cultura_gauchesca,https://montevideo.gub.uy/areatematica/cultura-y-tiempo-libre/semana-criolla,https://www.guiaturista.com.uy/montevideo/que-semana-criolla-montevideo-valepena-visitarla-n4769PatrimonioUruguay.net,https://patrimoniouruguay.net/fiestas-tradiciones/criolla-del-prado/TurismoEnUruguay.net,https://turismoenuruguay.net/historia-y-cultura/gauchos-uruguayos-custodioscultura-centenaria/"
+  
   },
+
+  
   {
     "id": 5,
     "tituloPrincipal": "Origin of the Gaucho tradition",
@@ -47,6 +51,8 @@
     "descripcion": "In this article, we will learn a little more about Creole culture, its roots, and origins. A tradition that remains alive to this day, experienced year after year during Creole Week, for example, where this culture has been celebrated for many years.",
     "imagen1": "https://www.fundacionbrou.com.uy/wp-content/uploads/2019/10/foto-1-panel-5-min.jpg",
     "imagen2": "https://uruguayeduca.anep.edu.uy/sites/default/files/2020-09/Carlos_Morel_-_Payada_en_una_pulper%C3%ADa.jpg",
-    "idioma": "ing"
+    "idioma": "ing",
+   "bibliografia": "https://es.wikipedia.org/wiki/Gaucho,https://uruguaynatural.com/es/masqueunpais/el-gaucho-2/,https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/10002/1/TS_FonsecaValentina.pdf,https://es.wikipedia.org/wiki/Cultura_gauchesca,https://montevideo.gub.uy/areatematica/cultura-y-tiempo-libre/semana-criolla,https://www.guiaturista.com.uy/montevideo/que-semana-criolla-montevideo-valepena-visitarla-n4769PatrimonioUruguay.net,https://patrimoniouruguay.net/fiestas-tradiciones/criolla-del-prado/TurismoEnUruguay.net,https://turismoenuruguay.net/historia-y-cultura/gauchos-uruguayos-custodioscultura-centenaria/"
+  
   }
 ]
