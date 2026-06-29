@@ -83,11 +83,14 @@
 
     <p>Recibí las últimas noticias y artículos directamente en tu correo.</p>
 
-    <form class="newsletter">
-    <input type="email" placeholder="Tu correo electrónico">
+    <form class="newsletter" id="newsletterForm">
+    <input type="email" id="newsletterEmail" placeholder="Tu correo electrónico" required>
     <button type="submit">→</button>
-    </form>
-</div>
+</form>
+
+<p id="newsletterMsg"></p>
+
+    </div>
 </div>
 
 <div class="footer-bottom">
@@ -95,7 +98,7 @@
     <span>Montevideo, Uruguay ♡</span>
 </div>
 </footer>
-
+<script src="contacto.js"></script>
 
 </body>
 </html>

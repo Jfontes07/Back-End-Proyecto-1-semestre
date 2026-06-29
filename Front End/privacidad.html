@@ -69,11 +69,14 @@ puede comunicarse con el administrador del sitio.</p>
 <p>Recibí las últimas noticias y artículos directamente en tu correo.</p>
 
 
-<form class="newsletter">
-<input type="email" placeholder="Tu correo electrónico">
-<button type="submit">→</button>
+ <form class="newsletter" id="newsletterForm">
+    <input type="email" id="newsletterEmail" placeholder="Tu correo electrónico" required>
+    <button type="submit">→</button>
 </form>
-</div>
+
+<p id="newsletterMsg"></p>
+
+    </div>
 
 
 <div class="footer-bottom">
@@ -81,6 +84,6 @@ puede comunicarse con el administrador del sitio.</p>
 <span>Montevideo, Uruguay ♡</span>
 </div>
 </footer>
-
+<script src="contacto.js"></script>
 </body>
 </html>

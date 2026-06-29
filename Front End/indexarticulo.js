@@ -87,3 +87,24 @@ function abrirLightbox(src) {
     document.getElementById("tituloPrincipal").textContent = "Error al cargar el artículo";
   }
 });
+const newsletterForm = document.getElementById("newsletterForm");
+const newsletterMsg = document.getElementById("newsletterMsg");
+
+if (newsletterForm) {
+    newsletterForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("newsletterEmail").value.trim();
+
+        if (email === "") {
+            newsletterMsg.style.color = "red";
+            newsletterMsg.textContent = "Ingresá un correo válido.";
+            return;
+        }
+
+        newsletterMsg.style.color = "green";
+        newsletterMsg.textContent = "¡Te suscribiste correctamente! ✔";
+
+        newsletterForm.reset();
+    });
+}
