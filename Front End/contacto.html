@@ -15,6 +15,9 @@
     mediante el siguiente formulario.</p>
 
 <form>
+    <form>
+    <p id="mensajeExito"></p>
+
     <label for="nombre">Nombre</label>
     <input type="text" id="nombre" placeholder="Ingresa tu nombre">
 
@@ -58,11 +61,12 @@
 
     <p>Recibí las últimas noticias y artículos directamente en tu correo.</p>
 
-    <form class="newsletter">
-    <input type="email" placeholder="Tu correo electrónico">
+   <form class="newsletter" id="newsletterForm">
+    <input type="email" id="newsletterEmail" placeholder="Tu correo electrónico" required>
     <button type="submit">→</button>
-    </form>
-    </div>
+</form>
+
+<p id="newsletterMsg"></p>
 
     </div>
 
@@ -75,5 +79,6 @@
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
 
+<script src="contacto.js"></script>
  </body>
 </html>
