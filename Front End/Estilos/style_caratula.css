@@ -88,7 +88,7 @@
 }
 
 .contenido-destacado {
-  width: 900px; /* prueba 800px o 900px */
+  width: 900px;
   max-width: 90%;
   background: white;
   border-radius: 20px;
@@ -108,6 +108,7 @@
   align-items: center;
   overflow: hidden;
 }
+
 .texto-destacado {
   width: 350px;
   display: flex;
@@ -115,7 +116,6 @@
   justify-content: center;
 }
 
-/* prop. de las noticias tamaños de las imagenes y textos */
 .texto-destacado h1 {
   font-size: 2.2rem;
   margin-bottom: 10px;
@@ -137,10 +137,6 @@
   overflow: hidden;
 }
 
-.texto-destacado h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
 .texto-destacado h1 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -171,7 +167,6 @@
   background: #d9d9d9;
   border-radius: 10px;
   margin-bottom: 15px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,21 +193,17 @@
   padding: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
+
 .imagen-horizontal {
   width: 220px;
   height: 160px;
   background: #d9d9d9;
   border-radius: 10px;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Si el total de artículos es impar (1, 3, 5, 7...), el más nuevo
-   (primero en el DOM) se despega arriba ocupando las 2 columnas,
-   y el resto sigue abajo respetando el 2 y 2. Es puro CSS: no hace
-   falta marcar nada especial desde el JS. */
 .articulos-horizontales
   .articulo-horizontal:first-child:nth-last-child(2n + 1) {
   grid-column: 1 / -1;
@@ -314,6 +305,7 @@
 .card:hover .card__side--back {
   transform: rotateY(0);
 }
+
 .card__side--front-1 {
   z-index: 2;
 }
@@ -329,6 +321,7 @@
 .card:hover .card__side--back {
   z-index: 2;
 }
+
 .imagen_art {
   width: 250px;
   height: 200px;
@@ -349,6 +342,7 @@
   padding: 1px;
   border-radius: 10px;
 }
+
 .card__info-content {
   flex: 1;
   display: flex;
@@ -405,7 +399,6 @@
   background: #d9d9d9;
   border-radius: 10px;
   margin-bottom: 15px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -416,6 +409,7 @@
   font-size: 1.5rem;
   padding: 1rem;
 }
+
 .card__info-content p {
   color: #221f1f;
 }
@@ -447,7 +441,8 @@
   font-size: 1rem;
   line-height: 1.6;
 }
-/*Fuente*/
+
+/* Fuente */
 @font-face {
   font-family: "Barlow";
   src: url("../fonts/Barlow-Regular.ttf") format("truetype");
@@ -455,6 +450,8 @@
 
 body {
   font-family: "Barlow", sans-serif;
+  padding-top: 230px; /* compensa el header fixed (logo 200px + padding) */
+  overflow-x: hidden;
 }
 
 .contenedor-caratula {
@@ -471,6 +468,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
+
 .categoria {
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -511,25 +509,65 @@ h1 {
   border-bottom: 2px solid #1a1a1a;
 }
 
+/* ── TITULO FIXED ───────────────────────────────── */
+.rv-title-center {
+  text-align: center;
+  padding: 10px 0 6px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 20px rgba(100, 140, 200, 0.12);
+  transition:
+    padding 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.rv-title-center.scrolled {
+  padding: 3px 0 2px;
+  background: rgba(255, 255, 255, 0.26);
+  box-shadow: 0 4px 24px rgba(100, 140, 200, 0.2);
+}
+
+/* Logo */
 .rv-logo-img {
-  height: 200px;
   width: auto;
+  height: 150px;
   display: block;
   margin: 0 auto;
-  transition: transform 0.3s ease;
-  transform-origin: center center;
+  transition: height 0.3s ease;
 }
 
 .rv-title-center.scrolled .rv-logo-img {
-  transform: scale(0.6); /* o el valor que te guste, en vez de height: 100px */
+  height: 60px;
 }
 
+/* Subtítulo de edicion digital*/
 .rv-subtitle {
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #1b1b1b;
   margin-top: 3px;
+}
+
+
+
+
+
+
+/* Tocando el logo vuelve arriba */
+.rv-home-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 /* ── NAV: fila de boxes ─────────────────────────── */
@@ -777,7 +815,7 @@ h1 {
   }
 }
 
-/*eso es el pop*/
+/* Pop */
 #overlay {
   position: fixed;
   inset: 0;
@@ -826,6 +864,7 @@ h1 {
     background 0.3s ease,
     box-shadow 0.3s ease;
 }
+
 .btn-btn--white {
   display: inline-block;
   padding: 10px 28px;
@@ -851,11 +890,6 @@ h1 {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   transform: translateY(-2px);
 }
-.btn-btn--white:hover {
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px);
-}
 
 .rv-nav-redaccion {
   margin-left: 6px;
@@ -875,53 +909,6 @@ h1 {
 .btn-crear:hover {
   background-color: #0a0a0a;
 }
-
-/* ===== TITULO STICKY ===== */
-
-.rv-title-center {
-  text-align: center;
-  padding: 10px 0 6px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 4px 20px rgba(100, 140, 200, 0.12);
-
-  transition:
-    background 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.rv-title-center.scrolled {
-  background: rgba(255, 255, 255, 0.26);
-  box-shadow: 0 4px 24px rgba(100, 140, 200, 0.2);
-}
-
-.rv-logo-img {
-  height: 200px;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-
-  transition: transform 0.3s ease;
-  transform-origin: center center;
-}
-
-/*tocando el logo o header vuelve arriba*/
-
-.rv-home-link{
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
-
-
 
 /* ==========================
    FOOTER
@@ -976,8 +963,6 @@ h1 {
   color: black;
 }
 
-/* Columnas */
-
 .footer-col {
   display: flex;
   flex-direction: column;
@@ -1003,8 +988,6 @@ h1 {
   transform: translateX(5px);
 }
 
-/* Newsletter */
-
 .newsletter {
   display: flex;
   margin-top: 15px;
@@ -1023,6 +1006,7 @@ h1 {
 .newsletter input::placeholder {
   color: black;
 }
+
 .newsletter button {
   width: 60px;
   border: none;
@@ -1038,22 +1022,17 @@ h1 {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* Footer inferior */
-
 .footer-bottom {
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   color: rgba(3, 3, 12, 0.75);
   font-size: 0.9rem;
+  width: auto;
 }
-
-/* Responsive */
 
 @media (max-width: 1000px) {
   .footer-container {
@@ -1080,12 +1059,8 @@ h1 {
     gap: 10px;
     text-align: center;
   }
-}
-.rv-logo-img {
-  width: 250px;
-  height: auto;
-}
 
-.rv-title-center.scrolled .rv-logo-img {
-  height: 100px;
+  body {
+    padding-top: 180px;
+  }
 }

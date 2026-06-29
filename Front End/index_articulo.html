@@ -5,75 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Esencia Uruguaya</title>
     <link rel="stylesheet" href="estilos/style_articulo.css" />
-    <link rel="stylesheet" href="estilos/style_caratula.css" />
   </head>
 
   <body>
     <div id="inicio"></div>
 
-<a href="index_caratula.html" class="rv-home-link">
-  <div class="rv-title-center">
-    <img src="Fotos/esenciauruguaya-animado.gif" alt="Esencia Uruguaya" class="rv-logo-img" />
-    <div class="rv-subtitle">edición digital · montevideo</div>
-  </div>
-</a>
+    <!-- HEADER FIXED COMPLETO: logo + nav en un solo bloque fixed -->
+    <div class="rv-header-fixed" id="rv-header-fixed">
 
-<header class="rv-header">
-  <nav class="rv-nav">
-    <div class="rv-nav-item">
-      <span class="rv-nav-label">Fecha</span>
-      <span class="rv-date" id="rv-fecha"></span>
-    </div>
-    <div class="rv-nav-item">
-      <span class="rv-nav-label">Visitas</span>
-      <div class="rv-visitas">
-        👀
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=escencia-uruguaya&left_color=7bafd4&right_color=4a90d9&left_text=Visitas" class="rv-badge" />
+      <div class="rv-title-center">
+        <a href="index_caratula.html" class="rv-home-link">
+          <img src="Fotos/esenciauruguaya-animado.gif" alt="Esencia Uruguaya" class="rv-logo-img" />
+          <div class="rv-subtitle">edición digital · montevideo</div>
+        </a>
       </div>
+
+      <nav class="rv-nav">
+        <div class="rv-nav-item">
+          <span class="rv-nav-label">Fecha</span>
+          <span class="rv-date" id="rv-fecha"></span>
+        </div>
+
+        <div class="rv-nav-item">
+          <span class="rv-nav-label">Visitas</span>
+          <div class="rv-visitas">
+            👀
+            <img src="https://visitor-badge.laobi.icu/badge?page_id=escencia-uruguaya&left_color=7bafd4&right_color=4a90d9&left_text=Visitas" class="rv-badge" />
+          </div>
+        </div>
+
+        <div class="rv-nav-item rv-nav-musica">
+          <span class="rv-nav-label">Música</span>
+          <div class="rv-player">
+            <button class="rv-player-btn" id="rv-prev">⏮</button>
+            <button class="rv-player-btn rv-play-pause" id="rv-play">▶</button>
+            <button class="rv-player-btn" id="rv-next">⏭</button>
+            <span class="rv-song-name" id="rv-song-name">♪ Cargando...</span>
+          </div>
+          <audio id="rv-audio"></audio>
+        </div>
+
+        <div class="rv-nav-item">
+          <span class="rv-nav-label">Clima</span>
+          <div class="rv-clima">
+            <span class="rv-temp" id="rv-temp">--°C</span>
+            <span class="rv-loc">📍 Montevideo</span>
+            <span class="rv-cond" id="rv-cond"></span>
+          </div>
+        </div>
+
+        <div class="rv-nav-item rv-nav-redaccion">
+          <span class="rv-nav-label">Redacción</span>
+          <a href="form/index.html" class="btn-crear">Nuevo artículo</a>
+        </div>
+      </nav>
+
+      <div class="rv-line"></div>
     </div>
+    <!-- /rv-header-fixed -->
 
-
-    <div class="rv-nav-item rv-nav-musica">
-  <span class="rv-nav-label">Música</span>
-  <div class="rv-player">
-    <button class="rv-player-btn" id="rv-prev">⏮</button>
-    <button class="rv-player-btn rv-play-pause" id="rv-play">▶</button>
-    <button class="rv-player-btn" id="rv-next">⏭</button>
-    <span class="rv-song-name" id="rv-song-name">♪ Cargando...</span>
-  </div>
-  <audio id="rv-audio"></audio>
-</div>
-
-
-    <div class="rv-nav-item">
-      <span class="rv-nav-label">Clima</span>
-      <div class="rv-clima">
-        <span class="rv-temp" id="rv-temp">--°C</span>
-        <span class="rv-loc">📍 Montevideo</span>
-        <span class="rv-cond" id="rv-cond"></span>
-      </div>
-    </div>
-    <div class="rv-nav-item rv-nav-redaccion">
-      <span class="rv-nav-label">Redacción</span>
-      <a href="form/index.html" class="btn-crear">Nuevo artículo</a>
-    </div>
-  </nav>
-  <div class="rv-line"></div>
-</header>
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
+
     <div class="contenedor">
       <main>
         <header class="header-articulo">
           <div>
             <h1 id="tituloPrincipal">Cargando...</h1>
           </div>
-
           <div>
             <h3 id="subtitulo"></h3>
-            <div>
-<p id="fecha" style="text-align:right; color:#555; font-size:0.9rem; margin-bottom:20px;"></p> </div>
+            <p id="fecha" style="text-align:right; color:#555; font-size:0.9rem; margin-bottom:20px;"></p>
+          </div>
         </header>
 
         <img id="Imagen1" src="" alt="Imagen del artículo" />
@@ -87,152 +91,127 @@
         <h5 id="autor">Creador</h5>
         <p id="bibliografia" style="text-align:center; font-size:0.9rem; margin-top:20px;"></p>
 
-  
-          <footer class="footer">
-    <div class="footer-container">
 
-        <div class="footer-brand">
-            <img src="Fotos/esenciauruguaya-animado.gif" alt="Esencia Uruguaya" class="rv-logo-img" />
-  <div class="rv-subtitle">edición digital · montevideo</div>
-
-         </div>
-
-        <div class="footer-col">
-            
-          <a href="index_caratula.html" class="inicio">Volver al inicio</a>
-      
-            <a href="contacto.html" class="btn-contacto">Contacto</a>
+        <!-- Lightbox -->
+        <div id="overlay-img" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
+          <div style="position:relative;">
+            <button onclick="document.getElementById('overlay-img').style.display='none'" style="position:absolute; top:-15px; right:-15px; background:white; border:none; border-radius:50%; width:30px; height:30px; font-size:1rem; cursor:pointer;">✕</button>
+            <img id="overlay-img-src" src="" style="max-width:90vw; max-height:90vh; border-radius:10px;" />
+          </div>
         </div>
-
-        <div class="footer-col">
-           
-
-            <a href="privacidad.html" class="btn-privacidad">
-          Políticas de Privacidad
-        </a> 
-            <a href="terminos.html" class="btn-terminos">
-          Términos y condiciones
-        </a>
-        </div>
-
-
-        <div class="footer-col">
-            <h3>✉ NEWSLETTER</h3>
-
-            <p>
-                Recibí las últimas noticias y artículos
-                directamente en tu correo.
-            </p>
-
-            <form class="newsletter">
-                <input type="email" placeholder="Tu correo electrónico">
-                <button type="submit">→</button>
-            </form>
-        </div>
-
-    </div>
-
-
-
-    <div class="footer-bottom">
-        <p>© 2026 Esencia Uruguaya. Todos los derechos reservados.</p>
-        <span>Montevideo, Uruguay ♡</span>
-    </div>
-</footer>
-     
-
-<!-- Lightbox para imágenes -->
-<div id="overlay-img" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
-  <div style="position:relative;">
-    <button onclick="document.getElementById('overlay-img').style.display='none'" style="position:absolute; top:-15px; right:-15px; background:white; border:none; border-radius:50%; width:30px; height:30px; font-size:1rem; cursor:pointer;">✕</button>
-    <img id="overlay-img-src" src="" style="max-width:90vw; max-height:90vh; border-radius:10px;" />
-  </div>
-</div>
       </main>
     </div>
+
+<footer class="footer">
+          <div class="footer-container">
+            <div class="footer-brand">
+              <img src="Fotos/esenciauruguaya-animado.gif" alt="Esencia Uruguaya" class="rv-logo-img" />
+              <div class="rv-subtitle">edición digital · montevideo</div>
+            </div>
+            <div class="footer-col">
+              <a href="index_caratula.html">Volver al inicio</a>
+              <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-col">
+              <a href="privacidad.html">Políticas de Privacidad</a>
+              <a href="terminos.html">Términos y condiciones</a>
+            </div>
+            <div class="footer-col">
+              <h3>✉ NEWSLETTER</h3>
+              <p>Recibí las últimas noticias y artículos directamente en tu correo.</p>
+              <form class="newsletter">
+                <input type="email" placeholder="Tu correo electrónico">
+                <button type="submit">→</button>
+              </form>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2026 Esencia Uruguaya. Todos los derechos reservados.</p>
+            <span>Montevideo, Uruguay ♡</span>
+          </div>
+        </footer>
 
     <script src="indexarticulo.js"></script>
     <script src="/BackEnd/api-clima/app.js"></script>
 
+    <!-- Scroll: RAF + umbral 180px, sin vibración -->
+    <script>
+      const header = document.getElementById("rv-header-fixed");
+      let tickPendiente = false;
+      let estaScrolled  = false;
+      const UMBRAL = 180;
 
-<script>
-const PLAYLIST = [
-  { src: "musica/santamarta.mp3", titulo: "Santa Marta · Larbanois Carrero" },
-  { src: "musica/Catalina.mp3",   titulo: "Montevideo · La Catalina" },
-  { src: "musica/rada.mp3",       titulo: "Mi País · Rada" },
-  { src: "musica/un_solo_color.mp3", titulo: "Cielo de un solo color · NTVG" },
-  { src: "musica/Zitarrosa.mp3",  titulo: "Pa´l que se va · Zitarrosa" },
-];
+      window.addEventListener("scroll", () => {
+        if (tickPendiente) return;
+        tickPendiente = true;
+        requestAnimationFrame(() => {
+          tickPendiente = false;
+          const deberiaScrolled = window.scrollY > UMBRAL;
+          if (deberiaScrolled === estaScrolled) return;
+          estaScrolled = deberiaScrolled;
+          header.classList.toggle("scrolled", estaScrolled);
+        });
+      }, { passive: true });
+    </script>
 
-function mezclar(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
+    <!-- Reproductor -->
+    <script>
+      const PLAYLIST = [
+        { src: "musica/santamarta.mp3",    titulo: "Santa Marta · Larbanois Carrero" },
+        { src: "musica/Catalina.mp3",      titulo: "Montevideo · La Catalina" },
+        { src: "musica/rada.mp3",          titulo: "Mi País · Rada" },
+        { src: "musica/un_solo_color.mp3", titulo: "Cielo de un solo color · NTVG" },
+        { src: "musica/Zitarrosa.mp3",     titulo: "Pa´l que se va · Zitarrosa" },
+      ];
 
-(function iniciarReproductor() {
-  const audio    = document.getElementById("rv-audio");
-  const btnPlay  = document.getElementById("rv-play");
-  const btnPrev  = document.getElementById("rv-prev");
-  const btnNext  = document.getElementById("rv-next");
-  const songName = document.getElementById("rv-song-name");
+      function mezclar(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
 
-  let playlist = mezclar(PLAYLIST);
-  let indice   = 0;
-  let iniciado = false;
+      (function iniciarReproductor() {
+        const audio    = document.getElementById("rv-audio");
+        const btnPlay  = document.getElementById("rv-play");
+        const btnPrev  = document.getElementById("rv-prev");
+        const btnNext  = document.getElementById("rv-next");
+        const songName = document.getElementById("rv-song-name");
 
-  function cargarCancion(idx) {
-    audio.src = playlist[idx].src;
-    songName.textContent = "♪ " + playlist[idx].titulo;
-  }
+        let playlist = mezclar(PLAYLIST);
+        let indice   = 0;
+        let iniciado = false;
 
-  function reproducir() {
-    audio.play().catch(() => {});
-    btnPlay.textContent = "⏸";
-  }
+        function cargarCancion(idx) {
+          audio.src = playlist[idx].src;
+          songName.textContent = "♪ " + playlist[idx].titulo;
+        }
+        function reproducir() { audio.play().catch(() => {}); btnPlay.textContent = "⏸"; }
+        function pausar()     { audio.pause(); btnPlay.textContent = "▶"; }
+        function siguiente()  { indice = (indice + 1) % playlist.length; cargarCancion(indice); reproducir(); }
+        function anterior()   { indice = (indice - 1 + playlist.length) % playlist.length; cargarCancion(indice); reproducir(); }
 
-  function pausar() {
-    audio.pause();
-    btnPlay.textContent = "▶";
-  }
+        audio.addEventListener("ended", siguiente);
 
-  function siguiente() {
-    indice = (indice + 1) % playlist.length;
-    cargarCancion(indice);
-    reproducir();
-  }
+        btnPlay.addEventListener("click", () => {
+          if (!iniciado) { cargarCancion(indice); iniciado = true; }
+          audio.paused ? reproducir() : pausar();
+        });
+        btnNext.addEventListener("click", () => { iniciado = true; siguiente(); });
+        btnPrev.addEventListener("click", () => { iniciado = true; anterior(); });
 
-  function anterior() {
-    indice = (indice - 1 + playlist.length) % playlist.length;
-    cargarCancion(indice);
-    reproducir();
-  }
+        document.addEventListener("click", function arrancar() {
+          if (!iniciado) {
+            cargarCancion(indice); iniciado = true; reproducir();
+            document.removeEventListener("click", arrancar);
+          }
+        });
 
-  audio.addEventListener("ended", siguiente);
-
-  btnPlay.addEventListener("click", () => {
-    if (!iniciado) { cargarCancion(indice); iniciado = true; }
-    audio.paused ? reproducir() : pausar();
-  });
-
-  btnNext.addEventListener("click", () => { iniciado = true; siguiente(); });
-  btnPrev.addEventListener("click", () => { iniciado = true; anterior(); });
-
-  document.addEventListener("click", function arrancar() {
-    if (!iniciado) {
-      cargarCancion(indice);
-      iniciado = true;
-      reproducir();
-      document.removeEventListener("click", arrancar);
-    }
-  });
-
-  cargarCancion(indice);
-})();
-</script>
+        cargarCancion(indice);
+      })();
+    </script>
 
   </body>
 </html>
