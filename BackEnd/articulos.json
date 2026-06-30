@@ -61,7 +61,8 @@
     "descripcion": "Desde sus orígenes en la cultura guaraní hasta su presencia en la vida cotidiana de millones de personas, el mate ha recorrido un largo camino. Conoce cómo esta tradición se convirtió en un símbolo de identidad, encuentro y cultura compartida en Sudamérica.",
     "imagen1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEPxMAVcIBbl3LsJyX85FHHo_a6xJQfi2GtDBcfcspA&s=10",
     "imagen2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj3b28ecYK60PWA8l8QCmlwPYctY5H6t8NakL8JzKdmA&s=10",
-    "idioma": "esp"
+    "idioma": "esp",
+    "bibliografia": "https://www.bbc.com/mundo/noticias-america-latina-42138588"
   },
   {
     "id": 6,
@@ -73,8 +74,10 @@
     "descripcion": "The National Mate Festival is one of the most important cultural events in Uruguay. This article explains its history, traditions, and activities, and shows how mate represents friendship, culture, and national identity.",
     "imagen1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuKH7Morcb-X6JxePxRZd5YDfw4hShMUE8yJKeq36G8g&s=10",
     "imagen2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWgIKL-Z3TBIHZZrMxZ-qonCazwtOknNnzl5Khr7o9A&s=10",
-    "idioma": "ing"
+    "idioma": "ing",
+    "bibliografia": "https://www.bbc.com/mundo/noticias-america-latina-42138588"
   },
+  
   {
     "id": 7,
     "tituloPrincipal": "Carnaval oriental: Raíces y evolución",
