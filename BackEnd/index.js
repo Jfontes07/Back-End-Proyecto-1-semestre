@@ -8,11 +8,9 @@ const path = require("path");
 const app = express();
 
 const PORT = process.env.PORT;
-const CORS_ORIGIN = (
-  process.env.CORS_ORIGIN 
-)
-  .split(",")
-  .map((origen) => origen.trim());
+const CORS_ORIGIN = process.env.CORS_ORIGIN.split(",").map((origen) =>
+  origen.trim(),
+);
 
 // Ruta del archivo donde se guardan los artículos
 const ARCHIVO_DATOS = path.join(__dirname, "articulos.json");
