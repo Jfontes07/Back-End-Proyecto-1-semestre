@@ -4,7 +4,12 @@
 // Lista de usuarios de demo. Cuando tengas un backend real,
 // reemplazá el bloque "validación" por un fetch a tu API.
 const USUARIOS = [
-  { usuario: "admin",       password: "1234" },
+  { usuario: "admin", password: "1234" },
+  { usuario: "jonathan", password: "12345" },
+
+  { usuario: "laura", password: "12345" },
+
+  { usuario: "montserrat", password: "12345" },
 ];
 
 const form = document.getElementById("formLogin");
@@ -24,18 +29,21 @@ form.addEventListener("submit", function (e) {
   // ---- validación ----
   // Buscamos si hay algún usuario en la lista que coincida
   const encontrado = USUARIOS.find(
-    (u) => u.usuario === usuario && u.password === password
+    (u) => u.usuario === usuario && u.password === password,
   );
 
   if (encontrado) {
     // Guardamos la sesión (dura mientras la pestaña esté abierta)
     sessionStorage.setItem("token", "demo-token-123");
-    sessionStorage.setItem("usuario", JSON.stringify({ nombre: encontrado.usuario }));
+    sessionStorage.setItem(
+      "usuario",
+      JSON.stringify({ nombre: encontrado.usuario }),
+    );
 
     mensaje.textContent = "¡Bienvenido! Redirigiendo...";
     mensaje.className = "mensaje ok";
 
-   setTimeout(() => {
+    setTimeout(() => {
       window.location.href = "../index_caratula.html";
     }, 800);
   } else {
