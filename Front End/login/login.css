@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "comic sans";
+  src: url("../fonts/Barlow-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "comic sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding-top: 140px;
+}
+
+/* Fondo animado, igual al de la carátula */
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(234, 234, 234) 50%, rgb(22, 94, 142) 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+.bg2 { animation-direction: alternate-reverse; animation-duration: 4s; }
+.bg3 { animation-duration: 5s; }
+
+@keyframes slide {
+  0% { transform: translateX(-25%); }
+  100% { transform: translateX(25%); }
+}
+
+/* Logo fijo arriba, igual que en index */
+.rv-title-center {
+  text-align: center;
+  padding: 10px 0 6px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 20px rgba(100, 140, 200, 0.12);
+}
+.rv-home-link { display: block; text-decoration: none; color: inherit; }
+.rv-logo-img { height: 90px; display: block; margin: 0 auto; }
+.rv-subtitle {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1b1b1b;
+  margin-top: 3px;
+}
+
+/* Tarjeta de login, mismo lenguaje visual que .contenedor-caratula */
+.caja-login {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 340px;
+  padding: 32px;
+  text-align: center;
+  color: #1a1a1a;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.caja-login h1 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  outline: none;
+  color: #1a1a1a;
+}
+
+input:focus {
+  border-color: #4a90d9;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #0e0e0f;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background: #0a0a0a;
+  transform: translateY(-2px);
+}
+
+.mensaje {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+.mensaje.error { color: #d32f2f; }
+.mensaje.ok { color: #2e7d32; }
+
+.pista {
+  display: block;
+  margin-top: 18px;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.pista:hover { text-decoration: underline; }

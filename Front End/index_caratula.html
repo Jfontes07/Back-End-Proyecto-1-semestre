@@ -64,7 +64,10 @@
         <a href="form/index.html" class="btn-crear">Nuevo artículo</a>
       </div>
       </div>
-
+<div class="rv-nav-item">
+  <span class="rv-nav-label">Cuenta</span>
+  <a href="login/login.html" id="rv-login-link" class="btn-crear">Iniciar sesión</a>
+</div>
     </nav>
 
     <div class="rv-line"></div>
@@ -188,5 +191,25 @@
     <script src="noticias.js"></script>
     <script src="/BackEnd/api-clima/app.js"></script>
     <script src="indexcaratula.js"></script>
+  
+
+    //este es el script de sesión//
+  
+<script>
+  const loginLink = document.getElementById("rv-login-link");
+  const token = sessionStorage.getItem("token");
+  if (token) {
+    const usuario = JSON.parse(sessionStorage.getItem("usuario"));
+    loginLink.textContent = "Cerrar sesión (" + usuario.nombre + ")";
+    loginLink.href = "#";
+    loginLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      sessionStorage.removeItem("token");
+      sessionStorage.removeItem("usuario");
+      location.reload();
+    });
+  }
+</script>
+
   </body>
 </html>
