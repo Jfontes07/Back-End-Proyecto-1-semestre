@@ -5,12 +5,12 @@
 }
 
 @font-face {
-  font-family: "comic sans";
+  font-family: "barlow";
   src: url("../fonts/Barlow-Regular.ttf") format("truetype");
 }
 
 body {
-  font-family: "comic sans", sans-serif;
+  font-family: "barlow", sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -22,7 +22,11 @@ body {
 /* Fondo animado, igual al de la carátula */
 .bg {
   animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, rgb(234, 234, 234) 50%, rgb(22, 94, 142) 50%);
+  background-image: linear-gradient(
+    -60deg,
+    rgb(234, 234, 234) 50%,
+    rgb(22, 94, 142) 50%
+  );
   bottom: 0;
   left: -50%;
   opacity: 0.5;
@@ -31,12 +35,21 @@ body {
   top: 0;
   z-index: -1;
 }
-.bg2 { animation-direction: alternate-reverse; animation-duration: 4s; }
-.bg3 { animation-duration: 5s; }
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+.bg3 {
+  animation-duration: 5s;
+}
 
 @keyframes slide {
-  0% { transform: translateX(-25%); }
-  100% { transform: translateX(25%); }
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
 }
 
 /* Logo fijo arriba, igual que en index */
@@ -54,8 +67,16 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 4px 20px rgba(100, 140, 200, 0.12);
 }
-.rv-home-link { display: block; text-decoration: none; color: inherit; }
-.rv-logo-img { height: 90px; display: block; margin: 0 auto; }
+.rv-home-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.rv-logo-img {
+  height: 90px;
+  display: block;
+  margin: 0 auto;
+}
 .rv-subtitle {
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -130,7 +151,9 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
 }
 
 button:hover {
@@ -144,8 +167,12 @@ button:hover {
   font-size: 0.9rem;
   min-height: 1.2em;
 }
-.mensaje.error { color: #d32f2f; }
-.mensaje.ok { color: #2e7d32; }
+.mensaje.error {
+  color: #d32f2f;
+}
+.mensaje.ok {
+  color: #2e7d32;
+}
 
 .pista {
   display: block;
@@ -155,4 +182,6 @@ button:hover {
   text-decoration: none;
   font-size: 0.9rem;
 }
-.pista:hover { text-decoration: underline; }
+.pista:hover {
+  text-decoration: underline;
+}
