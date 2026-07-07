@@ -47,7 +47,7 @@ function pintarSeccion(selector, lista) {
             </div>
             <div class="card__info-content">
               <p class="card__title">${articulo.tituloPrincipal}</p>
-              <p class="card__title">${articulo.subtitulo}</p>
+              <p class="card__subtitle">${articulo.subtitulo}</p>
             </div>
           </div>
           <div class="card__side card__side--back card__side--back-1">

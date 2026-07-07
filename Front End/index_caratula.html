@@ -19,8 +19,9 @@
   </a>
 </div>
 
+  <div class="rv-page">
+
   <header class="rv-header">
-    <main class="contenedor"></main>
     <!-- NAV: cada elemento en su propio box -->
     <nav class="rv-nav">
       <div class="rv-nav-item">
@@ -59,15 +60,33 @@
         </div>
       </div>
 
-      <div class="rv-nav-item rv-nav-redaccion">
+      <div class="rv-nav-item rv-nav-redaccion oculto" id="rv-nav-redaccion">
         <span class="rv-nav-label">Redacción</span>
         <a href="form/index.html" class="btn-crear">Nuevo artículo</a>
       </div>
+
+      <div class="rv-nav-item rv-nav-login" id="rv-nav-login">
+        <span class="rv-nav-label">Cuenta</span>
+        <button type="button" class="btn-crear" id="rv-login-btn">Iniciar sesión</button>
+
+        <!-- Popup glassy de login, anclado al botón -->
+        <div class="login-pop" id="login-pop">
+          <div class="login-pop__arrow"></div>
+          <h3 class="login-pop__title">Iniciar sesión</h3>
+
+          <form id="formLoginPop" autocomplete="off">
+            <label for="pop-usuario">Usuario</label>
+            <input type="text" id="pop-usuario" name="usuario" placeholder="admin" autocomplete="username" />
+
+            <label for="pop-password">Contraseña</label>
+            <input type="password" id="pop-password" name="password" placeholder="••••••" autocomplete="current-password" />
+
+            <button type="submit" class="login-pop__submit">Entrar</button>
+          </form>
+
+          <p id="pop-mensaje" class="mensaje"></p>
+        </div>
       </div>
-<div class="rv-nav-item">
-  <span class="rv-nav-label">Cuenta</span>
-  <a href="login/login.html" id="rv-login-link" class="btn-crear">Iniciar sesión</a>
-</div>
     </nav>
 
     <div class="rv-line"></div>
@@ -183,33 +202,17 @@
     <img id="overlay-img-src" src="" style="max-width:100%; max-height:85vh; border-radius:10px;" />
   </div>
 </div>
-      
-    </main>
+
+  </div>
+  <!-- fin .rv-page -->
+
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
     <script src="noticias.js"></script>
     <script src="/BackEnd/api-clima/app.js"></script>
     <script src="indexcaratula.js"></script>
-  
-
-    //este es el script de sesión//
-  
-<script>
-  const loginLink = document.getElementById("rv-login-link");
-  const token = sessionStorage.getItem("token");
-  if (token) {
-    const usuario = JSON.parse(sessionStorage.getItem("usuario"));
-    loginLink.textContent = "Cerrar sesión (" + usuario.nombre + ")";
-    loginLink.href = "#";
-    loginLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      sessionStorage.removeItem("token");
-      sessionStorage.removeItem("usuario");
-      location.reload();
-    });
-  }
-</script>
+    <script src="auth.js"></script>
 
   </body>
 </html>

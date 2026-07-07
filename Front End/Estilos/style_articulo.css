@@ -28,10 +28,24 @@ body {
 }
 
 .contenedor {
+  position: relative;
+  z-index: 1;
   width: 90%;
   max-width: 1600px;
-  margin: 0 auto;
-  padding: 20px 30px;
+  margin: 30px auto 50px;
+  padding: 40px 50px;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(20, 40, 80, 0.18);
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    width: auto;
+    margin: 20px 12px 30px;
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
 }
 
 #contenido {
