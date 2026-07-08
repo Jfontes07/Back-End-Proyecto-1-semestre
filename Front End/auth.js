@@ -8,7 +8,7 @@
 // por un fetch a POST /login (ver GUIA.md).
 const USUARIOS = [
   { usuario: "admin", password: "1234" },
-  { usuario: "rose", password: "rose123" },
+  { usuario: "marianella", password: "1234" },
   { usuario: "jonathan", password: "12345" },
   { usuario: "laura", password: "12345" },
   { usuario: "montserrat", password: "12345" },
