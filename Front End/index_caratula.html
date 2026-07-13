@@ -128,20 +128,6 @@
 </section>
 
 
-
-
-
-
-
-
-
-      <!---esto es el pop-->
-<div id="overlay">
-  <div class="popup">
-    <button class="close-btn" onclick="document.getElementById('overlay').style.display='none'">✕</button>
-    <img src="/Front End/Fotos/Portada.png" alt="Portada">
-  </div>
-</div>
 <footer class="footer">
     <div class="footer-container">
 
@@ -195,16 +181,37 @@
     </div>
 </footer>
 
-<!-- Lightbox para imágenes -->
-<div id="overlay-img" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
-  <div style="position:relative; max-width:90%; max-height:90%;">
-    <button onclick="document.getElementById('overlay-img').style.display='none'" style="position:absolute; top:-15px; right:-15px; background:white; border:none; border-radius:50%; width:30px; height:30px; font-size:1rem; cursor:pointer;">✕</button>
-    <img id="overlay-img-src" src="" style="max-width:100%; max-height:85vh; border-radius:10px;" />
-  </div>
-</div>
-
   </div>
   <!-- fin .rv-page -->
+
+  <!-- ══════════════════════════════════════════════════════
+       IMPORTANTE: el popup y el lightbox se movieron ACÁ AFUERA
+       de .rv-page a propósito. .rv-page tiene position:relative
+       + z-index:1, lo que crea su propio "stacking context": todo
+       lo que esté adentro (aunque tenga z-index:9999) queda
+       atrapado compitiendo solo dentro de ese contexto, y hacia
+       afuera .rv-page entero vale z-index:1. Como .rv-title-center
+       (el logo fijo) está afuera con z-index:100, tapaba el popup
+       sin importar el z-index interno. Al ponerlo como hermano de
+       .rv-page, su z-index:9999 ahora sí compite directo contra el
+       100 del logo, y gana.
+  ══════════════════════════════════════════════════════ -->
+
+  <!---esto es el pop-->
+  <div id="overlay">
+    <div class="popup">
+      <button class="close-btn" onclick="document.getElementById('overlay').style.display='none'">✕</button>
+      <img src="/Front End/Fotos/Portada.png" alt="Portada">
+    </div>
+  </div>
+
+  <!-- Lightbox para imágenes -->
+  <div id="overlay-img" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
+    <div style="position:relative; max-width:90%; max-height:90%;">
+      <button onclick="document.getElementById('overlay-img').style.display='none'" style="position:absolute; top:-15px; right:-15px; background:white; border:none; border-radius:50%; width:30px; height:30px; font-size:1rem; cursor:pointer;">✕</button>
+      <img id="overlay-img-src" src="" style="max-width:100%; max-height:85vh; border-radius:10px;" />
+    </div>
+  </div>
 
     <div class="bg"></div>
     <div class="bg bg2"></div>
